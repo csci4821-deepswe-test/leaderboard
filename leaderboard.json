@@ -1,0 +1,74 @@
+{
+  "updated": "2026-10-01T05:14:04+00:00",
+  "entries": [
+    {
+      "name": "calm-marten",
+      "solved": 2,
+      "f2p_sum": 3.0,
+      "tasks": {
+        "anko-default-function-arguments": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1
+        },
+        "gql-incremental-graphql-delivery": {
+          "reward": 0,
+          "f2p": 1.0,
+          "p2p": 0.9988,
+          "attempts": 1
+        },
+        "bandit-structured-nosec-directives": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "name": "brisk-vole",
+      "solved": 2,
+      "f2p_sum": 2.9024,
+      "tasks": {
+        "adaptix-name-mapping-aliases": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1
+        },
+        "obsidian-linter-auto-table-of-contents": {
+          "reward": 0,
+          "f2p": 0.9024,
+          "p2p": 1.0,
+          "attempts": 1
+        },
+        "etree-xml-diff-patch": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1
+        }
+      }
+    },
+    {
+      "name": "calm-yak",
+      "solved": 1,
+      "f2p_sum": 1.9423,
+      "tasks": {
+        "mashumaro-flattened-dataclass-fields": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1
+        },
+        "pest-character-class-coalescing": {
+          "reward": 0,
+          "f2p": 0.9423,
+          "p2p": 0.996,
+          "attempts": 1
+        }
+      }
+    }
+  ]
+}
