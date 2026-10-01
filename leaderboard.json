@@ -1,10 +1,78 @@
 {
-  "updated": "2026-10-01T05:14:04+00:00",
+  "updated": "2026-10-01T05:19:10+00:00",
+  "max_submissions": 3,
+  "tasks": [
+    {
+      "id": "adaptix-name-mapping-aliases",
+      "short": "adaptix",
+      "title": "Add input key aliases to name mapping",
+      "lang": "python",
+      "repo": "reagento/adaptix",
+      "pass_rate": 0.714
+    },
+    {
+      "id": "anko-default-function-arguments",
+      "short": "anko",
+      "title": "Add default arguments to Anko function parameters",
+      "lang": "go",
+      "repo": "mattn/anko",
+      "pass_rate": 0.732
+    },
+    {
+      "id": "bandit-structured-nosec-directives",
+      "short": "bandit",
+      "title": "Add structured nosec directives for regions and next line",
+      "lang": "python",
+      "repo": "PyCQA/bandit",
+      "pass_rate": 0.068
+    },
+    {
+      "id": "etree-xml-diff-patch",
+      "short": "etree",
+      "title": "Add XML diff, patch, and merge operations to etree",
+      "lang": "go",
+      "repo": "beevik/etree",
+      "pass_rate": 0.657
+    },
+    {
+      "id": "gql-incremental-graphql-delivery",
+      "short": "gql",
+      "title": "Add GraphQL incremental delivery with @defer and @stream",
+      "lang": "python",
+      "repo": "graphql-python/gql",
+      "pass_rate": 0.036
+    },
+    {
+      "id": "mashumaro-flattened-dataclass-fields",
+      "short": "mashumaro",
+      "title": "Add flattened dataclass fields to Mashumaro field options",
+      "lang": "python",
+      "repo": "Fatal1ty/mashumaro",
+      "pass_rate": 0.543
+    },
+    {
+      "id": "obsidian-linter-auto-table-of-contents",
+      "short": "obsidian",
+      "title": "Add automatic table of contents generation for Obsidian linter",
+      "lang": "typescript",
+      "repo": "platers/obsidian-linter",
+      "pass_rate": 0.025
+    },
+    {
+      "id": "pest-character-class-coalescing",
+      "short": "pest",
+      "title": "Coalesce qualifying choices into character classes",
+      "lang": "rust",
+      "repo": "pest-parser/pest",
+      "pass_rate": 0.207
+    }
+  ],
   "entries": [
     {
       "name": "calm-marten",
       "solved": 2,
       "f2p_sum": 3.0,
+      "submissions": 3,
       "tasks": {
         "anko-default-function-arguments": {
           "reward": 1,
@@ -30,6 +98,7 @@
       "name": "brisk-vole",
       "solved": 2,
       "f2p_sum": 2.9024,
+      "submissions": 3,
       "tasks": {
         "adaptix-name-mapping-aliases": {
           "reward": 1,
@@ -55,6 +124,7 @@
       "name": "calm-yak",
       "solved": 1,
       "f2p_sum": 1.9423,
+      "submissions": 2,
       "tasks": {
         "mashumaro-flattened-dataclass-fields": {
           "reward": 1,

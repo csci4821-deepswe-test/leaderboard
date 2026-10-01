@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSCI 4821 DeepSWE Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --ink:#18202b; --muted:#5b6674; --line:#d9dee4; --soft:#e9edf1;
+  --accent:#0d6b85; --accent-soft:#dcedf2;
+  --pass:#1f7a4a; --pass-soft:#dcefe3; --fail:#b3261e; --fail-soft:#f7dedb; --part:#9a6b00; --part-soft:#f4ead0;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace; --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  --cond:"IBM Plex Sans Condensed","IBM Plex Sans",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark; --bg:#10151c; --surface:#171e27; --ink:#e4e9ef; --muted:#97a3b1; --line:#2a3440; --soft:#1e2731;
+  --accent:#5cb8d1; --accent-soft:#16323b;
+  --pass:#5cc98c; --pass-soft:#163326; --fail:#f0877e; --fail-soft:#3a1d1b; --part:#e0b654; --part-soft:#352b12;}}
+:root[data-theme="dark"]{
+  color-scheme:dark; --bg:#10151c; --surface:#171e27; --ink:#e4e9ef; --muted:#97a3b1; --line:#2a3440; --soft:#1e2731;
+  --accent:#5cb8d1; --accent-soft:#16323b;
+  --pass:#5cc98c; --pass-soft:#163326; --fail:#f0877e; --fail-soft:#3a1d1b; --part:#e0b654; --part-soft:#352b12;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;padding-inline:16px;padding-block:28px 56px}
+.wrap{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1,h2{font-family:var(--cond);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(30px,5vw,44px);font-weight:700;line-height:1.05}
+h2{font-size:22px;font-weight:600}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+header{display:flex;flex-direction:column;gap:12px}
+header p{margin:0;max-width:66ch}
+.notice{display:flex;gap:10px;align-items:flex-start;background:var(--part-soft);border:1px solid color-mix(in srgb,var(--part) 35%,transparent);padding:10px 14px;border-radius:6px;font-size:14px;max-width:760px}
+.notice b{color:var(--part)}
+.status{font:13px var(--mono);color:var(--muted);display:flex;gap:8px;align-items:center}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--pass);flex:none}
+.status.err .dot{background:var(--fail)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.stat{background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:2px}
+.stat .v{font-family:var(--mono);font-size:24px;font-weight:600;font-variant-numeric:tabular-nums}
+.stat .k{font-size:13px;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:14px}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:12px}
+input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input[type=search]{font:14px var(--sans);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 10px;width:220px;max-width:100%}
+.table-box{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:720px;font-variant-numeric:tabular-nums}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--soft);white-space:nowrap}
+th{font:500 12px var(--mono);color:var(--muted);letter-spacing:.03em;background:var(--surface);position:sticky;top:0}
+th.t,td.cell{text-align:center}
+tbody tr:last-child td{border-bottom:0}
+tr.hit td{background:var(--accent-soft)}
+td.rank{font-family:var(--mono);color:var(--muted);width:48px}
+.n{font-weight:600;font-family:var(--mono)}
+.chip{display:inline-block;min-width:48px;font:500 12px var(--mono);padding:2px 6px;border-radius:4px}
+.chip.p{background:var(--pass-soft);color:var(--pass)}
+.chip.h{background:var(--part-soft);color:var(--part)}
+.chip.none{color:var(--line)}
+.score{font-family:var(--mono);font-weight:600;font-size:15px}
+.bar{display:inline-block;vertical-align:middle;width:64px;height:6px;background:var(--soft);border-radius:3px;margin-left:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.empty{padding:28px 16px;text-align:center;color:var(--muted)}
+.tasks{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
+.task{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
+.task .top{display:flex;justify-content:space-between;gap:10px;align-items:start}
+.task h3{margin:0;font:600 15px/1.3 var(--sans)}
+.task code{font:12px var(--mono);color:var(--muted);word-break:break-all}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:13px;margin:0}
+.kv dt{color:var(--muted)} .kv dd{margin:0;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.meter{height:8px;background:var(--soft);border-radius:4px;overflow:hidden}
+.meter i{display:block;height:100%}
+.lang{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:12px;counter-reset:s;margin:0;padding:0;list-style:none}
+.flow li{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.flow li::before{counter-increment:s;content:"Step " counter(s);font:500 12px var(--mono);color:var(--accent);letter-spacing:.05em;text-transform:uppercase}
+.flow b{font-weight:600}
+.note{font-size:13px;color:var(--muted);max-width:80ch;margin:0}
+@media (prefers-reduced-motion: no-preference){.bar i,.meter i{transition:width .4s ease}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">CSCI 4821 · Extra credit · DeepSWE v1.1</span>
+    <h1>DeepSWE Challenge Leaderboard</h1>
+    <p class="muted">Solve real open-source feature requests with Claude Code. Each submission is a patch; we re-run the held-out tests in a clean container and post the result here.</p>
+    <div class="notice"><b>Pilot.</b><span>Test data from TA known-answer runs. Scoring rules are not final.</span></div>
+    <div class="status" id="status" role="status"><span class="dot"></span><span id="status-t">Loading…</span></div>
+  </header>
+
+  <div class="stats" id="stats"></div>
+
+  <section>
+    <div class="sec-head">
+      <div><h2>Standings</h2><div class="muted" style="font-size:14px">Score = tasks fully solved (every new test passes, no existing test breaks). Ties broken by the share of new tests passed on unsolved tasks.</div></div>
+      <input id="q" type="search" placeholder="Find your leaderboard name" aria-label="Find your leaderboard name">
+    </div>
+    <div class="table-box"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
+    <p class="note">Names are pseudonyms. Your grading comment on your PR tells you yours. Cells show your best submission per task: <span class="chip p">pass</span> solved, <span class="chip h">90%</span> share of new tests passed, <span class="chip h">regressed</span> new tests pass but an existing test broke.</p>
+  </section>
+
+  <section>
+    <div><h2>Task pool</h2><div class="muted" style="font-size:14px">Sorted by public pass rate, easiest first. Public rate is from DeepSWE's published runs across ~70 model configurations.</div></div>
+    <div class="tasks" id="tasks"></div>
+  </section>
+
+  <section>
+    <h2>How a submission gets scored</h2>
+    <ol class="flow">
+      <li><b>Solve a task with Claude Code</b><span class="muted">Work interactively; your Claude Code transcript is part of the submission.</span></li>
+      <li><b>Open a PR in your course repo</b><span class="muted"><code>submission/task.txt</code>, <code>model.patch</code> and <code>transcript.jsonl</code>.</span></li>
+      <li><b>We re-grade</b><span class="muted">The patch is applied in a clean container and the held-out tests run. Results appear as a comment on your PR.</span></li>
+      <li><b>Board updates</b><span class="muted">Within a few minutes. You get <span id="max-sub">3</span> graded submissions in total, across all tasks.</span></li>
+    </ol>
+  </section>
+</div>
+
+<script>
+const REFRESH_MS = 90_000;
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let data = null, q = "", failing = false;
+try { q = localStorage.getItem("lb-q") || ""; } catch (e) {}
+document.getElementById("q").value = q;
+
+function ago(iso) {
+  const s = Math.max(0, (Date.now() - Date.parse(iso)) / 1000);
+  if (s < 90) return "just now";
+  if (s < 5400) return `${Math.round(s / 60)} min ago`;
+  if (s < 129600) return `${Math.round(s / 3600)} h ago`;
+  return new Date(iso).toLocaleDateString();
+}
+
+function cell(r) {
+  if (!r) return `<span class="chip none">—</span>`;
+  if (r.reward === 1) return `<span class="chip p">pass</span>`;
+  if (r.f2p >= 1) return `<span class="chip h" title="All new tests pass, but an existing test broke">regressed</span>`;
+  return `<span class="chip h" title="Share of new tests passed">${Math.floor(r.f2p * 100)}%</span>`;
+}
+
+function renderTable() {
+  const tasks = data.tasks, N = tasks.length;
+  document.getElementById("thead").innerHTML =
+    `<tr><th>#</th><th>Name</th><th>Solved / ${N}</th><th>Submissions</th>` +
+    tasks.map(t => `<th class="t" title="${esc(t.id)}">${esc(t.short)}</th>`).join("") + `</tr>`;
+  // Shared rank for exact ties.
+  let rank = 0, prev = null;
+  const ranked = data.entries.map((e, i) => {
+    const key = `${e.solved}|${e.f2p_sum}`;
+    if (key !== prev) { rank = i + 1; prev = key; }
+    return { e, rank };
+  });
+  const shown = ranked.filter(({ e }) => !q || e.name.toLowerCase().includes(q));
+  const tbody = document.getElementById("tbody");
+  if (!data.entries.length) { tbody.innerHTML = `<tr><td class="empty" colspan="${4 + N}">No graded submissions yet.</td></tr>`; return; }
+  if (!shown.length) { tbody.innerHTML = `<tr><td class="empty" colspan="${4 + N}">No name matches “${esc(q)}”.</td></tr>`; return; }
+  tbody.innerHTML = shown.map(({ e, rank }) => `<tr class="${q && e.name.toLowerCase() === q ? "hit" : ""}">
+    <td class="rank">${rank}</td>
+    <td><span class="n">${esc(e.name)}</span></td>
+    <td><span class="score">${e.solved}</span><span class="bar"><i style="width:${N ? e.solved / N * 100 : 0}%"></i></span></td>
+    <td class="muted" style="font-family:var(--mono)">${e.submissions}/${data.max_submissions}</td>
+    ${tasks.map(t => `<td class="cell">${cell(e.tasks[t.id])}</td>`).join("")}</tr>`).join("");
+}
+
+function renderRest() {
+  const tasks = data.tasks, E = data.entries;
+  const subs = E.reduce((a, e) => a + e.submissions, 0);
+  const solves = E.reduce((a, e) => a + e.solved, 0);
+  document.getElementById("stats").innerHTML = [
+    [E.length, "students on the board"],
+    [subs, "graded submissions"],
+    [solves, "tasks solved, all students"],
+    [tasks.length, "tasks in the pool"],
+  ].map(([v, k]) => `<div class="stat"><span class="v">${v}</span><span class="k">${k}</span></div>`).join("");
+  document.getElementById("max-sub").textContent = data.max_submissions;
+  document.getElementById("tasks").innerHTML = [...tasks].sort((a, b) => b.pass_rate - a.pass_rate).map(t => {
+    const pr = Math.round(t.pass_rate * 100);
+    const col = pr < 20 ? "var(--fail)" : pr < 50 ? "var(--part)" : "var(--pass)";
+    const tried = E.filter(e => e.tasks[t.id]).length;
+    const solved = E.filter(e => e.tasks[t.id]?.reward === 1).length;
+    return `<article class="task">
+      <div class="top"><h3>${esc(t.title)}</h3><span class="lang">${esc(t.lang)}</span></div>
+      <code>${esc(t.id)} · ${esc(t.repo)}</code>
+      <div><div style="display:flex;justify-content:space-between;font-size:13px"><span class="muted">Public pass rate</span><span style="font-family:var(--mono)">${pr}%</span></div>
+      <div class="meter"><i style="width:${Math.max(pr, 2)}%;background:${col}"></i></div></div>
+      <dl class="kv"><dt>Class</dt><dd>${solved} solved · ${tried} attempted</dd></dl>
+    </article>`;
+  }).join("");
+}
+
+function setStatus(err) {
+  const el = document.getElementById("status");
+  el.classList.toggle("err", !!err);
+  const upd = data ? `Updated ${ago(data.updated)}` : "";
+  document.getElementById("status-t").textContent =
+    err ? `${upd ? upd + " · " : ""}Couldn't refresh; retrying in ${REFRESH_MS / 1000}s` : `${upd} · refreshes automatically`;
+}
+
+async function load() {
+  try {
+    const r = await fetch(`leaderboard.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    data = await r.json();
+    failing = false;
+    renderTable(); renderRest(); setStatus(false);
+  } catch (e) {
+    failing = true;
+    setStatus(true);
+  }
+}
+
+document.getElementById("q").oninput = e => {
+  q = e.target.value.trim().toLowerCase();
+  try { localStorage.setItem("lb-q", q); } catch (err) {}
+  if (data) renderTable();
+};
+load();
+setInterval(load, REFRESH_MS);
+setInterval(() => data && setStatus(failing), 30_000);   // keep "N min ago" fresh
+</script>
+</body>
+</html>
