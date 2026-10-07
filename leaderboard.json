@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T19:33:10+00:00",
+  "updated": "2026-10-07T19:41:14+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -1559,13 +1559,13 @@
       "points_raw": 4.0,
       "solved": 1,
       "f2p_sum": 1.0,
-      "submissions": 2,
+      "submissions": 3,
       "tasks": {
         "httpx-streaming-json-iteration": {
           "reward": 1,
           "f2p": 1.0,
           "p2p": 1.0,
-          "attempts": 2,
+          "attempts": 3,
           "rank": 1,
           "points": 4.0
         }

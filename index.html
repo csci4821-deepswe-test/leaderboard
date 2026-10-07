@@ -153,7 +153,7 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
       <div class="rule"><h3>Limits</h3>
         <span><b id="max-sub2">3</b> graded submissions in total, across all tasks. Rejected PRs (missing files, wrong task ID) don't count.</span>
         <span>Your best result on each task counts. At most <b class="cap">10</b> points in total.</span>
-        <span class="muted">Pushing a new commit to a PR counts as a new submission.</span></div>
+        <span class="muted">Draft PRs are not graded. On a PR that is ready for review, each new commit counts as a new submission.</span></div>
     </div>
   </section>
 
@@ -175,7 +175,7 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
     <h2>How a submission gets scored</h2>
     <ol class="flow">
       <li><b>Solve a task with Claude Code</b><span class="muted">Work interactively; your Claude Code transcript is part of the submission.</span></li>
-      <li><b>Open a PR in your course repo</b><span class="muted"><code>submission/task.txt</code>, <code>model.patch</code> and <code>transcript.jsonl</code>.</span></li>
+      <li><b>Open a PR in your course repo</b><span class="muted"><code>submission/task.txt</code>, <code>model.patch</code> and <code>transcript.jsonl</code>. Open it as a <b>draft</b> while you work: drafts are never graded. Click “Ready for review” to submit; each new commit after that is a new submission.</span></li>
       <li><b>We re-grade</b><span class="muted">The patch is applied in a clean container and the held-out tests run. Results appear as a comment on your PR.</span></li>
       <li><b>Board updates</b><span class="muted">Within a few minutes (longer near the deadline, when many students submit). You get <span id="max-sub">3</span> graded submissions in total, across all tasks.</span></li>
     </ol>
