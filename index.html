@@ -126,7 +126,7 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
     <span class="eyebrow">CSCI 4821 · Extra credit · DeepSWE v1.1</span>
     <h1>DeepSWE Challenge Leaderboard</h1>
     <p class="muted">Solve real open-source feature requests with Claude Code. Each submission is a patch; we re-run the held-out tests in a clean container and post the result here.</p>
-    <div class="notice"><b>Pilot.</b><span>Test data from TA known-answer runs.</span></div>
+    <!-- remove this notice before the course launch --><div class="notice"><b>Trial.</b><span>Group trial in the test org; scores here do not count.</span></div>
     <div class="status" id="status" role="status"><span class="dot"></span><span id="status-t">Loading…</span></div>
   </header>
 
@@ -175,7 +175,7 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
     <h2>How a submission gets scored</h2>
     <ol class="flow">
       <li><b>Solve a task with Claude Code</b><span class="muted">Work interactively; your Claude Code transcript is part of the submission.</span></li>
-      <li><b>Open a PR in your course repo</b><span class="muted"><code>submission/task.txt</code>, <code>model.patch</code> and <code>transcript.jsonl</code>. Open it as a <b>draft</b> while you work: drafts are never graded. Click “Ready for review” to submit. After grading, the PR is closed; open a new PR to submit again.</span></li>
+      <li><b>Open a PR in your course repo</b><span class="muted"><code>./finish.sh</code> packages your patch and transcript and pushes a branch; opening its PR submits it. Drafts are never graded: click “Ready for review” to submit one. After grading, the PR is closed; run <code>./finish.sh</code> again to submit again.</span></li>
       <li><b>We re-grade</b><span class="muted">The patch is applied in a clean container and the held-out tests run. Results appear as a comment on your PR.</span></li>
       <li><b>Board updates</b><span class="muted">Within a few minutes (longer near the deadline, when many students submit). You get <span id="max-sub">3</span> graded submissions in total, across all tasks.</span></li>
     </ol>
@@ -304,7 +304,7 @@ function renderRest() {
       (isOpen ? `<tr class="detail" id="${did}"><td colspan="${COLS.length}"><div class="d">
         <span>${esc(t.desc || "")}</span>
         <span class="muted">Project <code>${esc(t.repo)}</code> · ${esc(t.lang)} · public pass rate ${Math.floor(t.pass_rate * 100)}%</span>
-        <span>Task ID for <code>submission/task.txt</code>: <code>${esc(t.id)}</code></span>
+        <span>Task ID: <code>${esc(t.id)}</code> · start it with <code>./start.sh ${esc(t.id)}</code> in your course repo (see its README)</span>
         <div class="slots" aria-label="Points for solvers 1 to ${shares.length}">${slots}</div>
       </div></td></tr>` : "");
   }).join("") : `<tr><td class="empty" colspan="${COLS.length}">No tasks match these filters.</td></tr>`;

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T06:35:33+00:00",
+  "updated": "2026-10-08T21:45:54+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -67,8 +67,8 @@
       "desc": "Add load-only alias support to name mapping so fields can resolve from alternate input keys.",
       "tier": "easy",
       "max_points": 2,
-      "solvers": 1,
-      "next_points": 1.5
+      "solvers": 0,
+      "next_points": 2.0
     },
     {
       "id": "aiomonitor-task-snapshots-diff",
@@ -93,8 +93,8 @@
       "desc": "Add parsing and call-time evaluation of default parameter values in Anko functions.",
       "tier": "easy",
       "max_points": 2,
-      "solvers": 1,
-      "next_points": 1.5
+      "solvers": 0,
+      "next_points": 2.0
     },
     {
       "id": "anko-typed-variable-bindings",
@@ -184,8 +184,8 @@
       "desc": "Add region and next-line nosec directives with selector expressions and ignore-nosec handling.",
       "tier": "hard",
       "max_points": 6,
-      "solvers": 1,
-      "next_points": 4.5
+      "solvers": 0,
+      "next_points": 6.0
     },
     {
       "id": "boa-hierarchical-evaluation-cancellation",
@@ -366,8 +366,8 @@
       "desc": "Add recursive XML diffing, patch generation and application, reverse patching, three-way merge, and diff summaries.",
       "tier": "easy",
       "max_points": 2,
-      "solvers": 1,
-      "next_points": 1.5
+      "solvers": 0,
+      "next_points": 2.0
     },
     {
       "id": "expr-try-catch-errors",
@@ -587,8 +587,8 @@
       "desc": "Add response iterators that incrementally parse JSON values from supported streaming media types.",
       "tier": "medium",
       "max_points": 4,
-      "solvers": 3,
-      "next_points": 1.0
+      "solvers": 0,
+      "next_points": 4.0
     },
     {
       "id": "igel-persist-feature-schema",
@@ -808,8 +808,8 @@
       "desc": "Add field_options support for flattening nested dataclass fields into parent dictionaries with prefix and rename validation.",
       "tier": "easy",
       "max_points": 2,
-      "solvers": 1,
-      "next_points": 1.5
+      "solvers": 0,
+      "next_points": 2.0
     },
     {
       "id": "meriyah-explicit-resource-declarations",
@@ -1488,148 +1488,5 @@
       "next_points": 2.0
     }
   ],
-  "entries": [
-    {
-      "name": "calm-lemur",
-      "points": 8.0,
-      "points_raw": 8.0,
-      "solved": 2,
-      "f2p_sum": 3.0,
-      "submissions": 3,
-      "tasks": {
-        "anko-default-function-arguments": {
-          "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
-          "attempts": 1,
-          "rank": 1,
-          "points": 2.0
-        },
-        "gql-incremental-graphql-delivery": {
-          "reward": 0,
-          "f2p": 1.0,
-          "p2p": 0.9988,
-          "attempts": 1
-        },
-        "bandit-structured-nosec-directives": {
-          "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
-          "attempts": 1,
-          "rank": 1,
-          "points": 6.0
-        }
-      }
-    },
-    {
-      "name": "deft-ibis",
-      "points": 4.0,
-      "points_raw": 4.0,
-      "solved": 2,
-      "f2p_sum": 2.9024,
-      "submissions": 3,
-      "tasks": {
-        "adaptix-name-mapping-aliases": {
-          "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
-          "attempts": 1,
-          "rank": 1,
-          "points": 2.0
-        },
-        "obsidian-linter-auto-table-of-contents": {
-          "reward": 0,
-          "f2p": 0.9024,
-          "p2p": 1.0,
-          "attempts": 1
-        },
-        "etree-xml-diff-patch": {
-          "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
-          "attempts": 1,
-          "rank": 1,
-          "points": 2.0
-        }
-      }
-    },
-    {
-      "name": "keen-lynx",
-      "points": 4.0,
-      "points_raw": 4.0,
-      "solved": 1,
-      "f2p_sum": 1.0,
-      "submissions": 3,
-      "tasks": {
-        "httpx-streaming-json-iteration": {
-          "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
-          "attempts": 3,
-          "rank": 1,
-          "points": 4.0
-        }
-      }
-    },
-    {
-      "name": "calm-lynx",
-      "points": 3.0,
-      "points_raw": 3.0,
-      "solved": 1,
-      "f2p_sum": 1.0,
-      "submissions": 2,
-      "tasks": {
-        "httpx-streaming-json-iteration": {
-          "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
-          "attempts": 2,
-          "rank": 2,
-          "points": 3.0
-        }
-      }
-    },
-    {
-      "name": "vivid-yak",
-      "points": 2.0,
-      "points_raw": 2.0,
-      "solved": 1,
-      "f2p_sum": 1.9423,
-      "submissions": 2,
-      "tasks": {
-        "mashumaro-flattened-dataclass-fields": {
-          "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
-          "attempts": 1,
-          "rank": 1,
-          "points": 2.0
-        },
-        "pest-character-class-coalescing": {
-          "reward": 0,
-          "f2p": 0.9423,
-          "p2p": 0.996,
-          "attempts": 1
-        }
-      }
-    },
-    {
-      "name": "vivid-badger",
-      "points": 2.0,
-      "points_raw": 2.0,
-      "solved": 1,
-      "f2p_sum": 1.0,
-      "submissions": 1,
-      "tasks": {
-        "httpx-streaming-json-iteration": {
-          "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
-          "attempts": 1,
-          "rank": 3,
-          "points": 2.0
-        }
-      }
-    }
-  ]
+  "entries": []
 }
