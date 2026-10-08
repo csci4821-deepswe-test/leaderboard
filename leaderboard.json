@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T19:41:14+00:00",
+  "updated": "2026-10-08T06:22:16+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -587,8 +587,8 @@
       "desc": "Add response iterators that incrementally parse JSON values from supported streaming media types.",
       "tier": "medium",
       "max_points": 4,
-      "solvers": 1,
-      "next_points": 3.0
+      "solvers": 2,
+      "next_points": 2.0
     },
     {
       "id": "igel-persist-feature-schema",
@@ -1568,6 +1568,24 @@
           "attempts": 3,
           "rank": 1,
           "points": 4.0
+        }
+      }
+    },
+    {
+      "name": "calm-lynx",
+      "points": 3.0,
+      "points_raw": 3.0,
+      "solved": 1,
+      "f2p_sum": 1.0,
+      "submissions": 1,
+      "tasks": {
+        "httpx-streaming-json-iteration": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1,
+          "rank": 2,
+          "points": 3.0
         }
       }
     },
