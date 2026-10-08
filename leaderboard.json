@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T21:45:54+00:00",
+  "updated": "2026-10-08T21:46:46+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -184,8 +184,8 @@
       "desc": "Add region and next-line nosec directives with selector expressions and ignore-nosec handling.",
       "tier": "hard",
       "max_points": 6,
-      "solvers": 0,
-      "next_points": 6.0
+      "solvers": 1,
+      "next_points": 4.5
     },
     {
       "id": "boa-hierarchical-evaluation-cancellation",
@@ -1488,5 +1488,24 @@
       "next_points": 2.0
     }
   ],
-  "entries": []
+  "entries": [
+    {
+      "name": "rapid-wombat",
+      "points": 6.0,
+      "points_raw": 6.0,
+      "solved": 1,
+      "f2p_sum": 1.0,
+      "submissions": 1,
+      "tasks": {
+        "bandit-structured-nosec-directives": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1,
+          "rank": 1,
+          "points": 6.0
+        }
+      }
+    }
+  ]
 }
