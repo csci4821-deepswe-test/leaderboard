@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T06:25:11+00:00",
+  "updated": "2026-10-08T06:35:33+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -587,8 +587,8 @@
       "desc": "Add response iterators that incrementally parse JSON values from supported streaming media types.",
       "tier": "medium",
       "max_points": 4,
-      "solvers": 2,
-      "next_points": 2.0
+      "solvers": 3,
+      "next_points": 1.0
     },
     {
       "id": "igel-persist-feature-schema",
@@ -1610,6 +1610,24 @@
           "f2p": 0.9423,
           "p2p": 0.996,
           "attempts": 1
+        }
+      }
+    },
+    {
+      "name": "vivid-badger",
+      "points": 2.0,
+      "points_raw": 2.0,
+      "solved": 1,
+      "f2p_sum": 1.0,
+      "submissions": 1,
+      "tasks": {
+        "httpx-streaming-json-iteration": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1,
+          "rank": 3,
+          "points": 2.0
         }
       }
     }
