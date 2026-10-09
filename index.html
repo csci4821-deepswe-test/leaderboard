@@ -311,7 +311,8 @@ function renderRest() {
         <span>${esc(t.desc || "")}</span>
         <span class="muted">Project <code>${esc(t.repo)}</code> · ${esc(t.lang)} · public pass rate ${Math.floor(t.pass_rate * 100)}%</span>
         <div class="start"><span>To start this task, run this in your DeepSWE repo's folder (task ID <code>${esc(t.id)}</code>; see the README):</span>
-          <div class="cmd"><code>./start.sh ${esc(t.id)}</code><button type="button" class="copy" data-copy="./start.sh ${esc(t.id)}">Copy</button></div></div>
+          <div class="cmd"><code>./start.sh ${esc(t.id)}</code><button type="button" class="copy" data-copy="./start.sh ${esc(t.id)}">Copy</button><span class="muted">macOS / Linux</span></div>
+          <div class="cmd"><code>.\\start.cmd ${esc(t.id)}</code><button type="button" class="copy" data-copy=".\\start.cmd ${esc(t.id)}">Copy</button><span class="muted">Windows (PowerShell)</span></div></div>
         <div class="slots" aria-label="Points for solvers 1 to ${shares.length}">${slots}</div>
       </div></td></tr>` : "");
   }).join("") : `<tr><td class="empty" colspan="${COLS.length}">No tasks match these filters.</td></tr>`;
