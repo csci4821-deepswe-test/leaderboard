@@ -1,17 +1,11 @@
 {
-  "updated": "2026-10-09T18:15:43+00:00",
+  "updated": "2026-10-09T19:36:34+00:00",
   "max_submissions": 3,
-  "cap": 10,
-  "rank_share": [
-    1.0,
-    0.75,
-    0.5,
-    0.25
-  ],
+  "max_solvers": 10,
   "tier_points": {
-    "hard": 6,
-    "medium": 4,
-    "easy": 2
+    "hard": 30,
+    "medium": 20,
+    "easy": 10
   },
   "tier_cutoffs": [
     0.25,
@@ -27,9 +21,11 @@
       "pass_rate": 0.754,
       "desc": "Harden ABS module resolution and caching, expose cache introspection APIs, and make module flags work correctly in script mode.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "abs-stepped-slices",
@@ -40,9 +36,11 @@
       "pass_rate": 0.732,
       "desc": "Add stepped slice parsing, slicing, and assignment for arrays and strings with rune-correct indexing.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "actionlint-action-pinning-lint",
@@ -53,9 +51,11 @@
       "pass_rate": 0.843,
       "desc": "Add a configurable lint rule that enforces pinned versions for action and reusable workflow references.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "adaptix-name-mapping-aliases",
@@ -66,9 +66,11 @@
       "pass_rate": 0.714,
       "desc": "Add load-only alias support to name mapping so fields can resolve from alternate input keys.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "aiomonitor-task-snapshots-diff",
@@ -79,9 +81,11 @@
       "pass_rate": 0.76,
       "desc": "Add point-in-time task snapshots with interactive inspection, diffing, deletion, and web/CLI access.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "anko-default-function-arguments",
@@ -92,9 +96,11 @@
       "pass_rate": 0.732,
       "desc": "Add parsing and call-time evaluation of default parameter values in Anko functions.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "anko-typed-variable-bindings",
@@ -105,9 +111,11 @@
       "pass_rate": 0.514,
       "desc": "Add typed `var` declarations in Anko and enforce declared type constraints on assignment when TypedBindings is enabled.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "arcane-drift-detection-baselines",
@@ -118,9 +126,11 @@
       "pass_rate": 0.729,
       "desc": "Implement baseline capture, drift comparison, and compliance tracking for container configurations.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "arktype-json-schema-refs-dependencies",
@@ -131,9 +141,11 @@
       "pass_rate": 0.389,
       "desc": "Add JSON Schema dependency keywords, local $defs/$ref resolution, and conditional schema handling.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "awilix-async-container-initialization",
@@ -144,9 +156,11 @@
       "pass_rate": 0.293,
       "desc": "Add dependency-aware asynchronous container initialization with ordered startup, concurrency limits, and rollback on failure.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "bandit-incremental-cache-control",
@@ -157,9 +171,11 @@
       "pass_rate": 0.532,
       "desc": "Add incremental analysis caching with cache invalidation, import/export, pruning, and cache inspection CLI options.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "bandit-interprocedural-taint-checks",
@@ -170,9 +186,11 @@
       "pass_rate": 0.511,
       "desc": "Track user input through variables and calls so Bandit flags injection sinks beyond string literals.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "bandit-structured-nosec-directives",
@@ -183,9 +201,11 @@
       "pass_rate": 0.068,
       "desc": "Add region and next-line nosec directives with selector expressions and ignore-nosec handling.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 1,
-      "next_points": 4.5
+      "available": true,
+      "points_each": 30.0,
+      "next_points": 15.0
     },
     {
       "id": "boa-hierarchical-evaluation-cancellation",
@@ -196,9 +216,11 @@
       "pass_rate": 0.548,
       "desc": "Add cancellable evaluation handles that propagate through nested script, module, and job execution.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "cattrs-partial-structuring-recovery",
@@ -209,9 +231,11 @@
       "pass_rate": 0.668,
       "desc": "Add `partial_structure` and `PartialResult` for recoverable, field-level structuring with nested partial results.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "clack-async-autocomplete-options",
@@ -222,9 +246,11 @@
       "pass_rate": 0.421,
       "desc": "Add async option fetching with caching, retries, debouncing, and loading state to AutocompletePrompt.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "claude-code-by-agents-recursive-delegation",
@@ -235,9 +261,11 @@
       "pass_rate": 0.577,
       "desc": "Run delegated sub-agents, feed their results back as tool_result, and handle unknown agents, failures, and circular delegation.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "cliffy-config-file-parsing",
@@ -248,9 +276,11 @@
       "pass_rate": 0.593,
       "desc": "Add command-level config file loading, parsing, merging, and precedence handling.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "csstree-shorthand-expansion-compression",
@@ -261,9 +291,11 @@
       "pass_rate": 0.339,
       "desc": "Add lexer methods to expand CSS shorthands into longhands and compress longhands back into shorthand values.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "dasel-html-document-format",
@@ -274,9 +306,11 @@
       "pass_rate": 0.554,
       "desc": "Add read and write support for HTML documents with Dasel's format handling.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "dateutil-rfc5545-timezone-interop",
@@ -287,9 +321,11 @@
       "pass_rate": 0.473,
       "desc": "Extend rrule and rruleset to serialize, parse, and compare RFC 5545 timezone-aware recurrence data.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "drizzle-orm-window-function-builders",
@@ -300,9 +336,11 @@
       "pass_rate": 0.896,
       "desc": "Add typed query-builder helpers for SQL window functions, named windows, and frame specs.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "dynamodb-toolbox-conditional-attribute-requirements",
@@ -313,9 +351,11 @@
       "pass_rate": 0.781,
       "desc": "Add `requiredIf`-based conditional attribute enforcement across schema validation, parsing, updates, and JSON Schema export.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "dynamodb-toolbox-lazy-recursive-schemas",
@@ -326,9 +366,11 @@
       "pass_rate": 0.735,
       "desc": "Add a lazy schema type for self-referencing recursive data with full serialization, validation, and export support.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "effect-sse-httpapi-streaming",
@@ -339,9 +381,11 @@
       "pass_rate": 0.186,
       "desc": "Add typed Server-Sent Events streaming endpoints, encoders/decoders, and client handling to HttpApi.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "eicrud-keyset-pagination-cursor",
@@ -352,9 +396,11 @@
       "pass_rate": 0.404,
       "desc": "Add cursor-based keyset pagination to `$find` with nextCursor handling and validation.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 1,
-      "next_points": 3.0
+      "available": true,
+      "points_each": 20.0,
+      "next_points": 10.0
     },
     {
       "id": "etree-xml-diff-patch",
@@ -365,9 +411,11 @@
       "pass_rate": 0.657,
       "desc": "Add recursive XML diffing, patch generation and application, reverse patching, three-way merge, and diff summaries.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "expr-try-catch-errors",
@@ -378,9 +426,11 @@
       "pass_rate": 0.418,
       "desc": "Add expression and block-level error recovery with try, catch, finally, throw, retry, and errtype.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "fastapi-deprecation-response-headers",
@@ -391,9 +441,11 @@
       "pass_rate": 0.507,
       "desc": "Add runtime Deprecation, Sunset, and Link headers plus OpenAPI metadata and tracking middleware for deprecated routes.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "fastapi-implicit-head-options",
@@ -404,9 +456,11 @@
       "pass_rate": 0.568,
       "desc": "Add configurable implicit HEAD handling and automatic OPTIONS responses for FastAPI routes, routers, and included routers.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "fd-deterministic-multi-key-sorting",
@@ -417,9 +471,11 @@
       "pass_rate": 0.671,
       "desc": "Add repeatable multi-key sorting controls to fd output with deterministic tie-breaking and seeded random order.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "geo-shapeindex-serialization",
@@ -430,9 +486,11 @@
       "pass_rate": 0.757,
       "desc": "Add stable ShapeIndex Encode/Decode support so indices round-trip without rebuilding.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "go-critic-doc-link-checker",
@@ -443,9 +501,11 @@
       "pass_rate": 0.479,
       "desc": "Add a diagnostic checker that validates doc comment symbol links against package and type information.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "go-genai-streamed-function-args",
@@ -456,9 +516,11 @@
       "pass_rate": 0.796,
       "desc": "Expose fully accumulated streamed function-call arguments across streaming, live sessions, and chat history.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "go-git-worktree-merge-conflicts",
@@ -469,9 +531,11 @@
       "pass_rate": 0.711,
       "desc": "Add worktree merge support with conflict detection, merge head handling, and index stage updates.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "goreleaser-retry-publish-auditing",
@@ -482,9 +546,11 @@
       "pass_rate": 0.836,
       "desc": "Implement per-artifact retries for uploads, artifactory, and blobs while recording deterministic publish attempt history.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "gql-incremental-graphql-delivery",
@@ -495,9 +561,11 @@
       "pass_rate": 0.036,
       "desc": "Add incremental GraphQL response handling with @defer and @stream across HTTP multipart, WebSocket transport, and the DSL.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "happy-dom-abort-pending-body-reads",
@@ -508,9 +576,11 @@
       "pass_rate": 0.904,
       "desc": "Ensure interrupted request and response body reads, formData parsing, and discarded timers abort cleanly during shutdown.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "happy-dom-deterministic-intersectionobserver",
@@ -521,9 +591,11 @@
       "pass_rate": 0.307,
       "desc": "Implement a real, deterministic IntersectionObserver with async delivery, thresholds, root margins, and target tracking.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "helm-array-merge-strategies",
@@ -534,9 +606,11 @@
       "pass_rate": 0.2,
       "desc": "Add chart-scoped append and key-based merge strategies for coalescing arrays during Helm value merging.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "helm-unified-manifest-stream",
@@ -547,9 +621,11 @@
       "pass_rate": 0.818,
       "desc": "Add a stable unified manifest stream for template, dry-run install/upgrade, and get manifest output.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "httpx-deterministic-cookie-store",
@@ -560,9 +636,11 @@
       "pass_rate": 0.861,
       "desc": "Add a deterministic CookieStore with modern Set-Cookie parsing, cookie eviction, and request header handling.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "httpx-multipart-response-parsing",
@@ -573,9 +651,11 @@
       "pass_rate": 0.621,
       "desc": "Add Response iterators that parse multipart HTTP response bodies into parts.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "httpx-streaming-json-iteration",
@@ -586,9 +666,11 @@
       "pass_rate": 0.436,
       "desc": "Add response iterators that incrementally parse JSON values from supported streaming media types.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "igel-persist-feature-schema",
@@ -599,9 +681,11 @@
       "pass_rate": 0.439,
       "desc": "Persist and reuse the fitted feature schema so evaluation, prediction, serving, and export all apply the same canonicalized inputs.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "ink-grid-box-layout",
@@ -612,9 +696,11 @@
       "pass_rate": 0.261,
       "desc": "Add CSS Grid layout parsing and placement to the Box component, including track sizing, gaps, and explicit child positioning.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "ipython-session-bundle-replay",
@@ -625,9 +711,11 @@
       "pass_rate": 0.636,
       "desc": "Add `.ipybundle` recording, validation, and replay APIs for IPython sessions.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "katex-multicolumn-array-spans",
@@ -638,9 +726,11 @@
       "pass_rate": 0.375,
       "desc": "Add `\\multicolumn` parsing and rendering for array-like environments with span-aware alignment and errors.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "kcp-go-multiplexed-kcp-streams",
@@ -651,9 +741,11 @@
       "pass_rate": 0.717,
       "desc": "Add a multiplexing layer that carries many ordered sub-streams over one KCP connection with flow control, priority scheduling, and SNMP counters.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "kea-atomic-signal-selectors",
@@ -664,9 +756,11 @@
       "pass_rate": 0.35,
       "desc": "Introduce fine-grained atomic selector tracking with dependency health, circular detection, and unchanged Kea lifecycle behavior.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "kgateway-consistent-hash-policy",
@@ -677,9 +771,11 @@
       "pass_rate": 0.425,
       "desc": "Add spec.consistentHash to TrafficPolicy and merge it into route hash_policy generation.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "kombu-single-active-consumer-priority",
@@ -690,9 +786,11 @@
       "pass_rate": 0.604,
       "desc": "Add single-active-consumer semantics, consumer priority selection, cancel notifications, and lifecycle tracking to virtual transports.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "kombu-virtual-queue-dead-lettering",
@@ -703,9 +801,11 @@
       "pass_rate": 0.346,
       "desc": "Add dead-letter routing, TTL expiry, and max-length overflow handling to the virtual transport layer.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "koota-composite-trait-aspects",
@@ -716,9 +816,11 @@
       "pass_rate": 0.376,
       "desc": "Add createAspect and aspect-aware query operations that merge constituent traits and propagate writes and lifecycle events.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "koota-deferred-mutation-buffer",
@@ -729,9 +831,11 @@
       "pass_rate": 0.343,
       "desc": "Add a deferred command buffer that batches entity mutations during query iteration and flushes them at defined boundaries.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "koota-entity-snapshot-rollback",
@@ -742,9 +846,11 @@
       "pass_rate": 0.706,
       "desc": "Add snapshot, rollback, and diff APIs for entities and worlds, including registry-based trait and relation serialization.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "koota-pair-relation-tracking",
@@ -755,9 +861,11 @@
       "pass_rate": 0.243,
       "desc": "Tracking modifiers should distinguish changes to specific relation pairs, not just trait-level additions and removals.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "koota-query-predicates",
@@ -768,9 +876,11 @@
       "pass_rate": 0.307,
       "desc": "Add composable value-based entity predicates with dependency tracking and change transitions.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "kysely-window-grouping-helpers",
@@ -781,9 +891,11 @@
       "pass_rate": 0.693,
       "desc": "Add grouped aggregation clauses, window frame builders, null-handling modifiers, and related SQL function helpers.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "langchain-request-coalescing",
@@ -794,9 +906,11 @@
       "pass_rate": 0.439,
       "desc": "Add `Runnable.with_coalesce()` so concurrent identical inputs share one execution across sync, async, streaming, and batch APIs.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "mashumaro-flattened-dataclass-fields",
@@ -807,9 +921,11 @@
       "pass_rate": 0.543,
       "desc": "Add field_options support for flattening nested dataclass fields into parent dictionaries with prefix and rename validation.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "meriyah-explicit-resource-declarations",
@@ -820,9 +936,11 @@
       "pass_rate": 0.218,
       "desc": "Add parsing and AST support for `using` and `await using` declarations, including context-sensitive errors.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "mnamer-daemon-watch-lifecycle",
@@ -833,9 +951,11 @@
       "pass_rate": 0.632,
       "desc": "Add daemon watch validation, state tracking, logging, and lifecycle commands with non-blocking run-once processing.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "mobly-grouped-test-barriers",
@@ -846,9 +966,11 @@
       "pass_rate": 0.656,
       "desc": "Add grouped execution phases with explicit synchronization barriers and per-group setup and teardown.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "narwhals-rolling-window-suite",
@@ -859,9 +981,11 @@
       "pass_rate": 0.9,
       "desc": "Add the remaining rolling window methods to Expr and Series with consistent validation and backend delegation.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "numba-stencil-boundary-modes",
@@ -872,9 +996,11 @@
       "pass_rate": 0.704,
       "desc": "Add configurable boundary handling modes to `@stencil` for out-of-bounds accesses.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "obsidian-linter-auto-table-of-contents",
@@ -885,9 +1011,11 @@
       "pass_rate": 0.025,
       "desc": "Implement an opt-in rule that generates and updates a TOC from document headings.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "obsidian-linter-link-format-conversion",
@@ -898,9 +1026,11 @@
       "pass_rate": 0.246,
       "desc": "Add a Link Style rule that converts between Obsidian wiki links or embeds and markdown links or images while preserving ignored regions and edge cases.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "obsidian-linter-scoped-ignore-markers",
@@ -911,9 +1041,11 @@
       "pass_rate": 0.711,
       "desc": "Implement standalone comment markers that disable and re-enable specific lint rules with nested scope handling.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "ofetch-per-origin-circuit-breaker",
@@ -924,9 +1056,11 @@
       "pass_rate": 0.832,
       "desc": "Add an opt-in per-origin circuit breaker for fetch requests with half-open probing and shared state across clients.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "onedump-dump-encryption-pipeline",
@@ -937,9 +1071,11 @@
       "pass_rate": 0.373,
       "desc": "Encrypt database dumps before upload and add keyed config, loading, and decryptable streaming support.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "opa-rego-rule-profiling",
@@ -950,9 +1086,11 @@
       "pass_rate": 0.611,
       "desc": "Add opt-in per-rule evaluation profiling to Rego results with profiling stats and diff helpers.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "opa-template-string-reconstruction",
@@ -963,9 +1101,11 @@
       "pass_rate": 0.67,
       "desc": "Rebuild lowered template strings into normal Rego syntax in partial evaluation outputs and support modules.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "optique-conditional-option-dependencies",
@@ -976,9 +1116,11 @@
       "pass_rate": 0.414,
       "desc": "Add conditional dependencies so options can require or hide based on other option presence or values.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "oxvg-structural-selector-preservation",
@@ -989,9 +1131,11 @@
       "pass_rate": 0.244,
       "desc": "Keep rewrite optimizations from breaking structure-dependent stylesheet selector matching.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "participle-grammar-conflict-analysis",
@@ -1002,9 +1146,11 @@
       "pass_rate": 0.354,
       "desc": "Add build-time static analysis that detects ambiguous participle grammars and reports conflicts.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "pebble-durability-wait-apis",
@@ -1015,9 +1161,11 @@
       "pass_rate": 0.596,
       "desc": "Add batch durability callbacks, durability wait methods, notifications, and metrics for sync write commits.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "pest-character-class-coalescing",
@@ -1028,9 +1176,11 @@
       "pass_rate": 0.207,
       "desc": "Add optimizer passes that collapse qualifying choice chains into merged character and negated character classes.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 2,
-      "next_points": 3.0
+      "available": true,
+      "points_each": 15.0,
+      "next_points": 10.0
     },
     {
       "id": "prometheus-transactional-reload-status",
@@ -1041,9 +1191,11 @@
       "pass_rate": 0.229,
       "desc": "Add an opt-in transactional config reload mode with durable reload outcomes, rollback tracking, and an HTTP status endpoint.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "prometheus-typed-label-sorting",
@@ -1054,9 +1206,11 @@
       "pass_rate": 0.593,
       "desc": "PromQL label sorting must order mixed typed and untyped label values with stable typed comparison rules.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "psd-tools-blend-range-api",
@@ -1067,9 +1221,11 @@
       "pass_rate": 0.836,
       "desc": "Add typed blend range objects, persist them on layers, and apply blend-if during compositing.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "pwntools-tube-multiplexing",
@@ -1080,9 +1236,11 @@
       "pass_rate": 0.404,
       "desc": "Add a TubeMultiplexer and MuxChannel API for multiple bidirectional logical channels over one tube, with flow control and close propagation.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "python-statemachine-state-data-scoping",
@@ -1093,9 +1251,11 @@
       "pass_rate": 0.357,
       "desc": "Add per-state scoped data ownership with lifecycle resets, callback injection, history restoration, and validation.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "query-persist-restored-query-state",
@@ -1106,9 +1266,11 @@
       "pass_rate": 0.704,
       "desc": "Preserve full persisted query state, including errors, counters, timestamps, and infinite pagination, during restoration and cache rebuilds.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "quill-shared-toolbar-focus",
@@ -1119,9 +1281,11 @@
       "pass_rate": 0.329,
       "desc": "Allow multiple Quill editors to share one toolbar container while routing toolbar actions and UI state to the currently active editor.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "returns-validated-error-accumulation",
@@ -1132,9 +1296,11 @@
       "pass_rate": 0.861,
       "desc": "Add a Validated container that accumulates errors while preserving standard container APIs.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "scc-bounded-memory-spilling",
@@ -1145,9 +1311,11 @@
       "pass_rate": 0.611,
       "desc": "Add an opt-in bounded-memory mode that spills per-file aggregation results to disk without changing output.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "scriggo-method-declarations",
@@ -1158,9 +1326,11 @@
       "pass_rate": 0.651,
       "desc": "Implement method declarations with receiver handling, method expressions, and interface satisfaction for Scriggo-defined types.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "skrub-duration-encoding",
@@ -1171,9 +1341,11 @@
       "pass_rate": 0.607,
       "desc": "Add a DurationEncoder, duration selector, and duration routing in TableVectorizer.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "sqlfmt-create-table-ddl-formatting",
@@ -1184,9 +1356,11 @@
       "pass_rate": 0.2,
       "desc": "Format CREATE TABLE statements with DDL-aware line breaking and add parsing models for table columns and constraints.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "sql-formatter-bigquery-pipe-formatting",
@@ -1197,9 +1371,11 @@
       "pass_rate": 0.857,
       "desc": "Add parsing and formatting support for BigQuery pipe syntax queries without changing traditional SQL formatting.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "sqlite-utils-safe-import-checkpoints",
@@ -1210,9 +1386,11 @@
       "pass_rate": 0.614,
       "desc": "Add safe bulk import checkpoints, invariant validation, and rollback-on-failure behavior.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "superjson-error-stack-serialization",
@@ -1223,9 +1401,11 @@
       "pass_rate": 0.358,
       "desc": "Add configurable serialization and restoration of error stacks, stack frames, causes, and sanitization in SuperJSON.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "task-task-graph-export",
@@ -1236,9 +1416,11 @@
       "pass_rate": 0.789,
       "desc": "Add a graph export command for tasks with JSON, DOT, and text output, including reverse traversal and status control.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "tengo-callable-instance-isolation",
@@ -1249,9 +1431,11 @@
       "pass_rate": 0.671,
       "desc": "Enable Go-side invocation of exported Tengo functions and closures while preserving runtime context and isolating compiled-instance state.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 1,
-      "next_points": 1.5
+      "available": true,
+      "points_each": 10.0,
+      "next_points": 5.0
     },
     {
       "id": "tengo-destructuring-bindings",
@@ -1262,9 +1446,11 @@
       "pass_rate": 0.629,
       "desc": "Add destructuring bindings for `:=` in arrays, maps, and function parameters.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "termenv-preserve-ansi-resets",
@@ -1275,9 +1461,11 @@
       "pass_rate": 0.118,
       "desc": "Add ANSI tokenization, reset-preserving truncation, and style-aware output helpers.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "testem-bail-on-test-failure",
@@ -1288,9 +1476,11 @@
       "pass_rate": 0.239,
       "desc": "Add configurable early bailout on test failures across runners, reporters, and exit codes.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "testem-per-launcher-reports",
@@ -1301,9 +1491,11 @@
       "pass_rate": 0.729,
       "desc": "Split report output into per-launcher files with template expansion, launcher-safe filenames, and per-launcher summaries.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "textual-kitty-key-phases",
@@ -1314,9 +1506,11 @@
       "pass_rate": 0.429,
       "desc": "Add full Kitty keyboard phase handling and stable fallback key metadata for keys and shortcuts.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "textual-richlog-follow-state",
@@ -1327,9 +1521,11 @@
       "pass_rate": 0.696,
       "desc": "Restore RichLog follow-mode parity with Log and preserve expand reflow behavior for justified writes.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "tomlkit-toml-table-converters",
@@ -1340,9 +1536,11 @@
       "pass_rate": 0.686,
       "desc": "Add in-place conversion helpers between standard tables, inline tables, dotted keys, and super tables while preserving comments and round-trip integrity.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "true-myth-iterable-collection-combinators",
@@ -1353,9 +1551,11 @@
       "pass_rate": 0.907,
       "desc": "Add iterable-aware sequence, traverse, zip, filtering, and task combinators across Maybe, Result, Task, and toolbelt APIs.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "ts-pattern-match-each",
@@ -1366,9 +1566,11 @@
       "pass_rate": 0.636,
       "desc": "Add a new `matchEach` matcher that evaluates all matching clauses and returns all results in order.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "updo-policy-alerting",
@@ -1379,9 +1581,11 @@
       "pass_rate": 0.171,
       "desc": "Add policy-driven alerting with consecutive failure, latency, recovery, and SSL expiry notifications.",
       "tier": "hard",
-      "max_points": 6,
+      "max_points": 30,
       "solvers": 0,
-      "next_points": 6.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 30.0
     },
     {
       "id": "valibot-recursive-schema-composition",
@@ -1392,9 +1596,11 @@
       "pass_rate": 0.7,
       "desc": "Add first-class recursive schema composition with `Recur`, `recursive(...)`, and `recursiveAsync(...)` wrappers.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "vitest-duration-sharding",
@@ -1405,9 +1611,11 @@
       "pass_rate": 0.782,
       "desc": "Add duration-aware sharding strategies and duration history handling for Vitest.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "vulture-persistent-analysis-cache",
@@ -1418,9 +1626,11 @@
       "pass_rate": 0.311,
       "desc": "Add a persistent cache so Vulture can reuse unchanged analysis across runs.",
       "tier": "medium",
-      "max_points": 4,
+      "max_points": 20,
       "solvers": 0,
-      "next_points": 4.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 20.0
     },
     {
       "id": "wasmi-trap-coredumps",
@@ -1431,9 +1641,11 @@
       "pass_rate": 0.75,
       "desc": "Generate opt-in Wasm coredumps on traps and attach the bytes to errors.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "wazero-multi-module-snapshots",
@@ -1444,9 +1656,11 @@
       "pass_rate": 0.761,
       "desc": "Add coordinated capture, restore, diff, and serialization for multi-module memory snapshots.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "yaegi-go-embed-directives",
@@ -1457,9 +1671,11 @@
       "pass_rate": 0.7,
       "desc": "Support //go:embed directives so interpreted package variables can receive embedded file contents and embed.FS values.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "yjs-map-conflict-detection",
@@ -1470,9 +1686,11 @@
       "pass_rate": 0.821,
       "desc": "Add strict, deterministic conflict detection for Y.Map key writes with collect and error policies.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     },
     {
       "id": "ytt-jsonpath-query-api",
@@ -1483,16 +1701,17 @@
       "pass_rate": 0.804,
       "desc": "Add orderedmap and Starlark JSONPath query APIs with selectors, filters, and syntax errors.",
       "tier": "easy",
-      "max_points": 2,
+      "max_points": 10,
       "solvers": 0,
-      "next_points": 2.0
+      "available": true,
+      "points_each": 0.0,
+      "next_points": 10.0
     }
   ],
   "entries": [
     {
       "name": "amber-badger",
-      "points": 10,
-      "points_raw": 10.0,
+      "points": 35.0,
       "solved": 2,
       "f2p_sum": 2.0,
       "submissions": 2,
@@ -1503,7 +1722,7 @@
           "p2p": 1.0,
           "attempts": 1,
           "rank": 1,
-          "points": 6.0
+          "points": 15.0
         },
         "eicrud-keyset-pagination-cursor": {
           "reward": 1,
@@ -1511,14 +1730,13 @@
           "p2p": 1.0,
           "attempts": 1,
           "rank": 1,
-          "points": 4.0
+          "points": 20.0
         }
       }
     },
     {
       "name": "rapid-wombat",
-      "points": 6.0,
-      "points_raw": 6.0,
+      "points": 30.0,
       "solved": 1,
       "f2p_sum": 1.0,
       "submissions": 1,
@@ -1529,14 +1747,13 @@
           "p2p": 1.0,
           "attempts": 1,
           "rank": 1,
-          "points": 6.0
+          "points": 30.0
         }
       }
     },
     {
       "name": "rapid-finch",
-      "points": 4.5,
-      "points_raw": 4.5,
+      "points": 15.0,
       "solved": 1,
       "f2p_sum": 1.0,
       "submissions": 3,
@@ -1553,14 +1770,13 @@
           "p2p": 1.0,
           "attempts": 2,
           "rank": 2,
-          "points": 4.5
+          "points": 15.0
         }
       }
     },
     {
       "name": "keen-raven",
-      "points": 2.0,
-      "points_raw": 2.0,
+      "points": 10.0,
       "solved": 1,
       "f2p_sum": 1.0,
       "submissions": 1,
@@ -1571,7 +1787,7 @@
           "p2p": 1.0,
           "attempts": 1,
           "rank": 1,
-          "points": 2.0
+          "points": 10.0
         }
       }
     }
