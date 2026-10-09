@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T04:11:32+00:00",
+  "updated": "2026-10-09T04:20:45+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -353,8 +353,8 @@
       "desc": "Add cursor-based keyset pagination to `$find` with nextCursor handling and validation.",
       "tier": "medium",
       "max_points": 4,
-      "solvers": 0,
-      "next_points": 4.0
+      "solvers": 1,
+      "next_points": 3.0
     },
     {
       "id": "etree-xml-diff-patch",
@@ -1491,11 +1491,11 @@
   "entries": [
     {
       "name": "amber-badger",
-      "points": 6.0,
-      "points_raw": 6.0,
-      "solved": 1,
-      "f2p_sum": 1.0,
-      "submissions": 1,
+      "points": 10,
+      "points_raw": 10.0,
+      "solved": 2,
+      "f2p_sum": 2.0,
+      "submissions": 2,
       "tasks": {
         "pest-character-class-coalescing": {
           "reward": 1,
@@ -1504,6 +1504,14 @@
           "attempts": 1,
           "rank": 1,
           "points": 6.0
+        },
+        "eicrud-keyset-pagination-cursor": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1,
+          "rank": 1,
+          "points": 4.0
         }
       }
     },
