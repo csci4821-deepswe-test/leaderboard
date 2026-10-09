@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T04:07:55+00:00",
+  "updated": "2026-10-09T04:11:32+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -1531,7 +1531,7 @@
       "points_raw": 4.5,
       "solved": 1,
       "f2p_sum": 1.0,
-      "submissions": 2,
+      "submissions": 3,
       "tasks": {
         "anko-default-function-arguments": {
           "reward": 0,
@@ -1543,7 +1543,7 @@
           "reward": 1,
           "f2p": 1.0,
           "p2p": 1.0,
-          "attempts": 1,
+          "attempts": 2,
           "rank": 2,
           "points": 4.5
         }
