@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CSCI 4821 DeepSWE Board</title>
+<title>CSCI 4821 Challenge Leaderboard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
@@ -121,7 +121,7 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
 .flow b{font-weight:600}
 .note{font-size:13px;color:var(--muted);max-width:80ch;margin:0}
 .short{display:none}
-@media (max-width:560px){.table-box table{min-width:0} #standings th:nth-child(4),#standings td:nth-child(4){display:none} .bar{width:40px} .long{display:none} .short{display:inline}
+@media (max-width:560px){.table-box table{min-width:0} .bar{width:40px} .long{display:none} .short{display:inline}
   #task-table .wide{display:none} #task-table td.tt{min-width:0} tr.detail td{padding-left:16px}}
 @media (prefers-reduced-motion: no-preference){.bar i,.meter i{transition:width .4s ease}}
 </style>
@@ -129,22 +129,20 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
 <body>
 <div class="wrap">
   <header>
-    <span class="eyebrow">CSCI 4821 · Extra credit · DeepSWE v1.1</span>
-    <h1>DeepSWE Challenge Leaderboard</h1>
-    <p class="muted">Solve real open-source feature requests with Claude Code. Each submission is a patch; we re-run the held-out tests in a clean container and post the result here.</p>
+    <span class="eyebrow">CSCI 4821 · Extra credit</span>
+    <h1>CSCI 4821 Challenge Leaderboard</h1>
+    <p class="muted">Solve real open-source feature requests with Claude Code.</p>
     <!-- remove this notice before the course launch --><div class="notice"><b>Trial.</b><span>Group trial in the test org; scores here do not count.</span></div>
     <div class="status" id="status" role="status"><span class="dot"></span><span id="status-t">Loading…</span></div>
   </header>
 
-  <div class="stats" id="stats"></div>
 
   <section>
     <div class="sec-head">
-      <div><h2>Standings</h2><div class="muted" style="font-size:14px">Ranked by points, then tasks solved, then share of new tests passed on unsolved tasks. Points change as more students solve the same tasks, and are provisional until the transcript review.</div></div>
-      <input id="q" type="search" placeholder="Find your leaderboard name" aria-label="Find your leaderboard name">
+      <div><h2>Standings</h2><div class="muted" style="font-size:14px">Ranked by points. Points change as more students solve the same tasks.</div></div>
+      <input id="q" type="search" placeholder="Find your GitHub username" aria-label="Find your GitHub username">
     </div>
     <div class="table-box"><table id="standings"><thead id="thead"></thead><tbody id="tbody"></tbody></table></div>
-    <p class="note">Names are pseudonyms; the grading comment on your PR tells you yours. Under each name: <span class="tag p">bandit +15</span> solved, with your current share of its points; <span class="tag">gql 94%</span> best try, share of new tests passed.</p>
   </section>
 
   <section>
@@ -154,18 +152,17 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
         <table><tbody id="tier-table"></tbody></table>
         <span class="muted">Difficulty comes from DeepSWE's public pass rate across ~70 model configurations.</span></div>
       <div class="rule"><h3>Shared points</h3>
-        <span>A task's points are split equally among everyone who solves it, up to <b class="max-solvers">10</b> students. Your share goes down when others solve the same task. After <span class="max-solvers">10</span> solvers the task is <b>not available</b>.</span>
+        <span>A task's points are split equally among everyone who solves it, up to <b class="max-solvers">10</b> students. Your share goes down when others solve the same task. After <span class="max-solvers">10</span> students solve a task, the task becomes <b>unavailable</b>.</span>
         <table><tbody id="share-table"></tbody></table>
-        <span class="muted">Who is among the first <span class="max-solvers">10</span> is decided by when you submitted (GitHub's time), not when we graded it.</span></div>
+</div>
       <div class="rule"><h3>Limits</h3>
-        <span><b id="max-sub2">3</b> graded submissions in total, across all tasks. Rejected PRs (missing files, wrong task ID) don't count.</span>
-        <span>Your best result on each task counts. Points are for ranking: the course staff set final extra credit from the ranking.</span>
-        <span class="muted">Opening a pull request (not a draft) submits it: it is graded once, uses one submission, and is then closed. A draft PR is not graded until you click “Ready for review”.</span></div>
+        <span><b id="max-sub2">3</b> graded submissions in total. Use them on different tasks or on the same task (for example, try a task again after a failed attempt).</span>
+</div>
     </div>
   </section>
 
   <section>
-    <div><h2>Tasks</h2><div class="muted" style="font-size:14px">A task's points are split among up to ten solvers (see Rules). <b>Next</b> is what each solver gets if you solve it next; dots show how many have solved it. <b>Not available</b>: ten students have solved it already. The grey name under each title is its <b>task ID</b>, the name you give <code>./start.sh</code>. Click a column to sort, a task to see details.</div></div>
+    <div><h2>Tasks</h2><div class="muted" style="font-size:14px">A task's points are split among the students who solve it, up to ten (see Rules); after that the task is <b>not available</b>. The grey name under each title is its <b>task ID</b>, the name you give <code>./start.sh</code>. Click a column to sort, a task to see details.</div></div>
     <div class="filters">
       <div class="seg" role="group" aria-label="Difficulty">
         <button type="button" data-tier="" aria-pressed="true">All</button><button type="button" data-tier="hard" aria-pressed="false">Hard</button><button type="button" data-tier="medium" aria-pressed="false">Medium</button><button type="button" data-tier="easy" aria-pressed="false">Easy</button>
@@ -187,13 +184,18 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
       <li><b>Board updates</b><span class="muted">Within a few minutes (longer near the deadline, when many students submit). You get <span id="max-sub">3</span> graded submissions in total, across all tasks.</span></li>
     </ol>
   </section>
+
+  <section>
+    <h2>Statistics</h2>
+    <div class="stats" id="stats"></div>
+  </section>
 </div>
 
 <script>
 const REFRESH_MS = 90_000;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 let data = null, q = "", failing = false;
-let tf = { tier: "", lang: "", open: false, q: "", sort: "next", dir: -1 };   // task filters and sort
+let tf = { tier: "", lang: "", open: false, q: "", sort: "tier", dir: -1 };   // task filters and sort
 const openTasks = new Set();   // expanded task rows
 try { Object.assign(tf, JSON.parse(localStorage.getItem("lb-tf") || "{}")); } catch (e) {}
 try { q = localStorage.getItem("lb-q") || ""; } catch (e) {}
@@ -226,7 +228,7 @@ function tags(e) {
 function renderTable() {
   const top = Math.max(1, ...data.entries.map(e => e.points));   // bars are relative to the leader
   document.getElementById("thead").innerHTML =
-    `<tr><th>#</th><th>Name and tasks</th><th>Points</th><th>Solved</th><th><span class="long">Submissions</span><span class="short">Used</span></th></tr>`;
+    `<tr><th>#</th><th>Name</th><th>Points</th></tr>`;
   let rank = 0, prev = null;   // shared rank for exact ties
   const ranked = data.entries.map((e, i) => {
     const key = `${e.points}|${e.solved}|${e.f2p_sum}`;
@@ -235,14 +237,13 @@ function renderTable() {
   });
   const shown = ranked.filter(({ e }) => !q || e.name.toLowerCase().includes(q));
   const tbody = document.getElementById("tbody");
-  if (!data.entries.length) { tbody.innerHTML = `<tr><td class="empty" colspan="5">No graded submissions yet.</td></tr>`; return; }
-  if (!shown.length) { tbody.innerHTML = `<tr><td class="empty" colspan="5">No name matches “${esc(q)}”.</td></tr>`; return; }
+  if (!data.entries.length) { tbody.innerHTML = `<tr><td class="empty" colspan="3">No graded submissions yet.</td></tr>`; return; }
+  if (!shown.length) { tbody.innerHTML = `<tr><td class="empty" colspan="3">No name matches “${esc(q)}”.</td></tr>`; return; }
   tbody.innerHTML = shown.map(({ e, rank }) => `<tr class="${q && e.name.toLowerCase() === q ? "hit" : ""}">
     <td class="rank">${rank}</td>
-    <td class="who"><span class="n">${esc(e.name)}</span><div class="solves">${tags(e)}</div></td>
+    <td class="who"><span class="n">${esc(e.name)}</span></td>
     <td><span class="score">${fmt(e.points)}</span><span class="bar"><i style="width:${e.points / top * 100}%"></i></span></td>
-    <td style="font-family:var(--mono)">${e.solved}</td>
-    <td class="muted" style="font-family:var(--mono)">${e.submissions}/${data.max_submissions}</td></tr>`).join("");
+</tr>`).join("");
 }
 
 function renderRest() {
@@ -261,13 +262,12 @@ function renderRest() {
   document.querySelectorAll(".max-solvers").forEach(el => el.textContent = max);
   const tp = data.tier_points, [hc, mc] = data.tier_cutoffs.map(x => Math.round(x * 100));
   document.getElementById("tier-table").innerHTML =
-    `<tr><th>Difficulty</th><th>Public pass rate</th><th>Points</th></tr>` +
+    `<tr><th>Difficulty</th><th>Points</th></tr>` +
     [["hard", `under ${hc}%`], ["medium", `${hc}–${mc}%`], ["easy", `${mc}% or more`]]
-      .map(([k, r]) => `<tr><td><span class="tier ${k}">${TIER[k]}</span></td><td>${r}</td><td style="font-family:var(--mono)">${tp[k]}</td></tr>`).join("");
+      .map(([k, r]) => `<tr><td><span class="tier ${k}">${TIER[k]}</span></td><td style="font-family:var(--mono)">${tp[k]}</td></tr>`).join("");
   document.getElementById("share-table").innerHTML =
     `<tr><th>Solvers</th><th>Each gets: Hard / Med / Easy</th></tr>` +
-    [...new Set([1, 2, 3, 5, max])].map(n => `<tr><td>${n}</td><td style="font-family:var(--mono)">${fmt(tp.hard / n)} / ${fmt(tp.medium / n)} / ${fmt(tp.easy / n)}</td></tr>`).join("") +
-    `<tr><td>${max + 1} on</td><td class="muted">not available</td></tr>`;
+    [...new Set([1, 2, 3, 5, max])].map(n => `<tr><td>${n}</td><td style="font-family:var(--mono)">${fmt(tp.hard / n)} / ${fmt(tp.medium / n)} / ${fmt(tp.easy / n)}</td></tr>`).join("");
   const langSel = document.getElementById("f-lang");
   const langs = [...new Set(tasks.map(t => t.lang))].sort();
   if (langSel.options.length !== langs.length + 1)
@@ -276,21 +276,17 @@ function renderRest() {
   const shownTasks = tasks.filter(t => (!tf.tier || t.tier === tf.tier) && (!tf.lang || t.lang === tf.lang) &&
     (!tf.open || t.available) && (!tf.q || `${t.id} ${t.title} ${t.repo}`.toLowerCase().includes(tf.q)));
   document.getElementById("f-count").textContent = `${shownTasks.length} of ${tasks.length} tasks`;
-  const tried = t => E.filter(e => e.tasks[t.id]).length;
   const COLS = [   // key, header, value for sorting, extra class
     ["title", "Task", t => t.title.toLowerCase(), ""],
     ["tier", "Difficulty", t => t.max_points, ""],
     ["lang", "Language", t => t.lang, "wide"],
-    ["next", "Next", t => t.next_points, ""],
-    ["solvers", "Solved", t => t.solvers, "wide"],
-    ["tried", "Attempted", tried, "wide"],
-    ["rate", "Public rate", t => t.pass_rate, "wide"],
+    ["solvers", "Solved", t => t.solvers, ""],
   ];
-  const col = COLS.find(c => c[0] === tf.sort) || COLS[3];
+  const col = COLS.find(c => c[0] === tf.sort) || COLS[1];
   document.getElementById("task-head").innerHTML = "<tr>" + COLS.map(([k, h, , cls]) =>
     `<th class="${cls}"${k === col[0] ? ` aria-sort="${tf.dir > 0 ? "ascending" : "descending"}"` : ""}><button type="button" data-sort="${k}">${h}</button></th>`).join("") + "</tr>";
   document.querySelectorAll("#task-head button").forEach(b => b.onclick = () =>
-    setTf(b.dataset.sort === tf.sort ? { dir: -tf.dir } : { sort: b.dataset.sort, dir: ["title", "lang", "rate"].includes(b.dataset.sort) ? 1 : -1 }));
+    setTf(b.dataset.sort === tf.sort ? { dir: -tf.dir } : { sort: b.dataset.sort, dir: ["title", "lang"].includes(b.dataset.sort) ? 1 : -1 }));
   const cmp = (a, b) => { const x = col[2](a), y = col[2](b); return x < y ? -1 : x > y ? 1 : 0; };
   const sorted = [...shownTasks].sort((a, b) => tf.dir * cmp(a, b) || b.next_points - a.next_points || a.pass_rate - b.pass_rate);
   document.getElementById("tasks").innerHTML = sorted.length ? sorted.map(t => {
@@ -304,19 +300,17 @@ function renderRest() {
       <td class="tt"><button type="button" class="tbtn" data-task="${esc(t.id)}" aria-expanded="${isOpen}" aria-controls="${did}">${esc(t.title)}</button><code class="tid" title="Task ID">${esc(t.id)}</code></td>
       <td><span class="tier ${t.tier}">${TIER[t.tier]} · ${t.max_points}</span></td>
       <td class="wide"><span class="lang">${esc(t.lang)}</span></td>
-      <td>${t.available ? `<span class="next">+${fmt(t.next_points)}</span>` : `<span class="next none">Not available</span>`}</td>
-      <td class="wide" style="font-family:var(--mono)" title="${t.solvers} of ${max} solved">${t.solvers}/${max}<span class="pips" aria-hidden="true">${pips}</span></td>
-      <td class="wide muted" style="font-family:var(--mono)">${tried(t)}</td>
-      <td class="wide muted" style="font-family:var(--mono)">${Math.floor(t.pass_rate * 100)}%</td></tr>` +
+      <td style="font-family:var(--mono)" title="${t.solvers} of ${max} solved">${t.solvers}/${max}<span class="pips" aria-hidden="true">${pips}</span>${t.available ? "" : ` <span class="next none">Not available</span>`}</td></tr>` +
       (isOpen ? `<tr class="detail" id="${did}"><td colspan="${COLS.length}"><div class="d">
         <span>${esc(t.desc || "")}</span>
-        <span class="muted">Project <code>${esc(t.repo)}</code> · ${esc(t.lang)} · public pass rate ${Math.floor(t.pass_rate * 100)}%</span>
-        <div class="start"><span>To start this task, run this in your DeepSWE repo's folder (task ID <code>${esc(t.id)}</code>; see the README):</span>
+        <span class="muted">Public pass rate ${Math.floor(t.pass_rate * 100)}%</span>
+        <div class="start"><span>To start this task, run this in your challenge repo's folder (task ID <code>${esc(t.id)}</code>; see the README):</span>
           <div class="cmd"><code>./start.sh ${esc(t.id)}</code><button type="button" class="copy" data-copy="./start.sh ${esc(t.id)}">Copy</button><span class="muted">macOS / Linux</span></div>
           <div class="cmd"><code>.\\start.cmd ${esc(t.id)}</code><button type="button" class="copy" data-copy=".\\start.cmd ${esc(t.id)}">Copy</button><span class="muted">Windows (PowerShell)</span></div></div>
         <span>${t.available
-          ? `${t.solvers} of ${max} solved${t.solvers ? ` · each solver now gets ${fmt(t.points_each)}` : ""} · if you solve it next, each solver gets <b>${fmt(t.next_points)}</b>`
+          ? `${t.solvers} of ${max} solved${t.solvers ? ` · each student that solved it now gets ${fmt(t.points_each)}` : ""} · if you solve it next, each student that solved the task gets <b>${fmt(t.next_points)}</b>`
           : `<b>Not available</b>: ${max} students have solved it (${fmt(t.points_each)} points each).`}</span>
+        ${t.solved_by && t.solved_by.length ? `<span>Solved by: ${t.solved_by.map(u => `<code>${esc(u)}</code>`).join(", ")}</span>` : ""}
         <div class="slots" aria-label="Points each solver gets when 1 to ${max} students have solved it">${slots}</div>
       </div></td></tr>` : "");
   }).join("") : `<tr><td class="empty" colspan="${COLS.length}">No tasks match these filters.</td></tr>`;

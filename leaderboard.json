@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T19:36:34+00:00",
+  "updated": "2026-10-09T21:41:16+00:00",
   "max_submissions": 3,
   "max_solvers": 10,
   "tier_points": {
@@ -24,6 +24,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -39,6 +40,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -54,6 +56,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -69,6 +72,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -84,6 +88,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -99,6 +104,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -114,6 +120,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -129,6 +136,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -144,6 +152,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -159,6 +168,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -174,6 +184,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -189,6 +200,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -204,6 +216,9 @@
       "max_points": 30,
       "solvers": 1,
       "available": true,
+      "solved_by": [
+        "jjwu67"
+      ],
       "points_each": 30.0,
       "next_points": 15.0
     },
@@ -219,6 +234,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -234,6 +250,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -249,6 +266,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -264,6 +282,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -279,6 +298,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -294,6 +314,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -309,6 +330,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -324,6 +346,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -339,6 +362,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -354,6 +378,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -369,6 +394,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -384,6 +410,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -399,6 +426,9 @@
       "max_points": 20,
       "solvers": 1,
       "available": true,
+      "solved_by": [
+        "staff-a"
+      ],
       "points_each": 20.0,
       "next_points": 10.0
     },
@@ -414,6 +444,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -429,6 +460,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -444,6 +476,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -459,6 +492,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -474,6 +508,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -489,6 +524,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -504,6 +540,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -519,6 +556,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -534,6 +572,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -549,6 +588,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -564,6 +604,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -579,6 +620,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -594,6 +636,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -609,6 +652,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -624,6 +668,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -639,6 +684,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -654,6 +700,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -669,6 +716,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -684,6 +732,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -699,6 +748,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -714,6 +764,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -729,6 +780,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -744,6 +796,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -759,6 +812,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -774,6 +828,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -789,6 +844,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -804,6 +860,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -819,6 +876,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -834,6 +892,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -849,6 +908,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -864,6 +924,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -879,6 +940,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -894,6 +956,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -909,6 +972,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -924,6 +988,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -939,6 +1004,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -954,6 +1020,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -969,6 +1036,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -984,6 +1052,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -999,6 +1068,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1014,6 +1084,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -1029,6 +1100,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -1044,6 +1116,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1059,6 +1132,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1074,6 +1148,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1089,6 +1164,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1104,6 +1180,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1119,6 +1196,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1134,6 +1212,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -1149,6 +1228,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1164,6 +1244,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1179,6 +1260,10 @@
       "max_points": 30,
       "solvers": 2,
       "available": true,
+      "solved_by": [
+        "staff-a",
+        "staff-b"
+      ],
       "points_each": 15.0,
       "next_points": 10.0
     },
@@ -1194,6 +1279,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -1209,6 +1295,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1224,6 +1311,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1239,6 +1327,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1254,6 +1343,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1269,6 +1359,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1284,6 +1375,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1299,6 +1391,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1314,6 +1407,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1329,6 +1423,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1344,6 +1439,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1359,6 +1455,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -1374,6 +1471,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1389,6 +1487,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1404,6 +1503,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1419,6 +1519,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1434,6 +1535,9 @@
       "max_points": 10,
       "solvers": 1,
       "available": true,
+      "solved_by": [
+        "mattiafazzini"
+      ],
       "points_each": 10.0,
       "next_points": 5.0
     },
@@ -1449,6 +1553,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1464,6 +1569,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -1479,6 +1585,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -1494,6 +1601,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1509,6 +1617,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1524,6 +1633,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1539,6 +1649,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1554,6 +1665,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1569,6 +1681,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1584,6 +1697,7 @@
       "max_points": 30,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 30.0
     },
@@ -1599,6 +1713,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1614,6 +1729,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1629,6 +1745,7 @@
       "max_points": 20,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 20.0
     },
@@ -1644,6 +1761,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1659,6 +1777,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1674,6 +1793,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1689,6 +1809,7 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     },
@@ -1704,13 +1825,14 @@
       "max_points": 10,
       "solvers": 0,
       "available": true,
+      "solved_by": [],
       "points_each": 0.0,
       "next_points": 10.0
     }
   ],
   "entries": [
     {
-      "name": "amber-badger",
+      "name": "staff-a",
       "points": 35.0,
       "solved": 2,
       "f2p_sum": 2.0,
@@ -1735,7 +1857,7 @@
       }
     },
     {
-      "name": "rapid-wombat",
+      "name": "jjwu67",
       "points": 30.0,
       "solved": 1,
       "f2p_sum": 1.0,
@@ -1752,7 +1874,7 @@
       }
     },
     {
-      "name": "rapid-finch",
+      "name": "staff-b",
       "points": 15.0,
       "solved": 1,
       "f2p_sum": 1.0,
@@ -1775,7 +1897,7 @@
       }
     },
     {
-      "name": "keen-raven",
+      "name": "mattiafazzini",
       "points": 10.0,
       "solved": 1,
       "f2p_sum": 1.0,
