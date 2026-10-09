@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T21:46:46+00:00",
+  "updated": "2026-10-09T04:03:50+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -1029,8 +1029,8 @@
       "desc": "Add optimizer passes that collapse qualifying choice chains into merged character and negated character classes.",
       "tier": "hard",
       "max_points": 6,
-      "solvers": 0,
-      "next_points": 6.0
+      "solvers": 1,
+      "next_points": 4.5
     },
     {
       "id": "prometheus-transactional-reload-status",
@@ -1489,6 +1489,24 @@
     }
   ],
   "entries": [
+    {
+      "name": "amber-badger",
+      "points": 6.0,
+      "points_raw": 6.0,
+      "solved": 1,
+      "f2p_sum": 1.0,
+      "submissions": 1,
+      "tasks": {
+        "pest-character-class-coalescing": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1,
+          "rank": 1,
+          "points": 6.0
+        }
+      }
+    },
     {
       "name": "rapid-wombat",
       "points": 6.0,
