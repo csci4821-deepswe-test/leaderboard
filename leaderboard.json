@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T04:20:45+00:00",
+  "updated": "2026-10-09T18:15:43+00:00",
   "max_submissions": 3,
   "cap": 10,
   "rank_share": [
@@ -1250,8 +1250,8 @@
       "desc": "Enable Go-side invocation of exported Tengo functions and closures while preserving runtime context and isolating compiled-instance state.",
       "tier": "easy",
       "max_points": 2,
-      "solvers": 0,
-      "next_points": 2.0
+      "solvers": 1,
+      "next_points": 1.5
     },
     {
       "id": "tengo-destructuring-bindings",
@@ -1554,6 +1554,24 @@
           "attempts": 2,
           "rank": 2,
           "points": 4.5
+        }
+      }
+    },
+    {
+      "name": "keen-raven",
+      "points": 2.0,
+      "points_raw": 2.0,
+      "solved": 1,
+      "f2p_sum": 1.0,
+      "submissions": 1,
+      "tasks": {
+        "tengo-callable-instance-isolation": {
+          "reward": 1,
+          "f2p": 1.0,
+          "p2p": 1.0,
+          "attempts": 1,
+          "rank": 1,
+          "points": 2.0
         }
       }
     }
