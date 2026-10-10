@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-09T21:41:16+00:00",
-  "max_submissions": 3,
+  "updated": "2026-10-10T05:28:29+00:00",
+  "max_per_task": 3,
   "max_solvers": 10,
   "tier_points": {
-    "hard": 30,
+    "hard": 40,
     "medium": 20,
     "easy": 10
   },
@@ -213,14 +213,14 @@
       "pass_rate": 0.068,
       "desc": "Add region and next-line nosec directives with selector expressions and ignore-nosec handling.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 1,
       "available": true,
       "solved_by": [
         "jjwu67"
       ],
-      "points_each": 30.0,
-      "next_points": 15.0
+      "points_each": 40.0,
+      "next_points": 20.0
     },
     {
       "id": "boa-hierarchical-evaluation-cancellation",
@@ -407,12 +407,12 @@
       "pass_rate": 0.186,
       "desc": "Add typed Server-Sent Events streaming endpoints, encoders/decoders, and client handling to HttpApi.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "eicrud-keyset-pagination-cursor",
@@ -601,12 +601,12 @@
       "pass_rate": 0.036,
       "desc": "Add incremental GraphQL response handling with @defer and @stream across HTTP multipart, WebSocket transport, and the DSL.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "happy-dom-abort-pending-body-reads",
@@ -649,12 +649,12 @@
       "pass_rate": 0.2,
       "desc": "Add chart-scoped append and key-based merge strategies for coalescing arrays during Helm value merging.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "helm-unified-manifest-stream",
@@ -921,12 +921,12 @@
       "pass_rate": 0.243,
       "desc": "Tracking modifiers should distinguish changes to specific relation pairs, not just trait-level additions and removals.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "koota-query-predicates",
@@ -1001,12 +1001,12 @@
       "pass_rate": 0.218,
       "desc": "Add parsing and AST support for `using` and `await using` declarations, including context-sensitive errors.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "mnamer-daemon-watch-lifecycle",
@@ -1081,12 +1081,12 @@
       "pass_rate": 0.025,
       "desc": "Implement an opt-in rule that generates and updates a TOC from document headings.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "obsidian-linter-link-format-conversion",
@@ -1097,12 +1097,12 @@
       "pass_rate": 0.246,
       "desc": "Add a Link Style rule that converts between Obsidian wiki links or embeds and markdown links or images while preserving ignored regions and edge cases.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "obsidian-linter-scoped-ignore-markers",
@@ -1209,12 +1209,12 @@
       "pass_rate": 0.244,
       "desc": "Keep rewrite optimizations from breaking structure-dependent stylesheet selector matching.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "participle-grammar-conflict-analysis",
@@ -1257,15 +1257,15 @@
       "pass_rate": 0.207,
       "desc": "Add optimizer passes that collapse qualifying choice chains into merged character and negated character classes.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 2,
       "available": true,
       "solved_by": [
         "staff-a",
         "staff-b"
       ],
-      "points_each": 15.0,
-      "next_points": 10.0
+      "points_each": 20.0,
+      "next_points": 13.3333
     },
     {
       "id": "prometheus-transactional-reload-status",
@@ -1276,12 +1276,12 @@
       "pass_rate": 0.229,
       "desc": "Add an opt-in transactional config reload mode with durable reload outcomes, rollback tracking, and an HTTP status endpoint.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "prometheus-typed-label-sorting",
@@ -1452,12 +1452,12 @@
       "pass_rate": 0.2,
       "desc": "Format CREATE TABLE statements with DDL-aware line breaking and add parsing models for table columns and constraints.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "sql-formatter-bigquery-pipe-formatting",
@@ -1566,12 +1566,12 @@
       "pass_rate": 0.118,
       "desc": "Add ANSI tokenization, reset-preserving truncation, and style-aware output helpers.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "testem-bail-on-test-failure",
@@ -1582,12 +1582,12 @@
       "pass_rate": 0.239,
       "desc": "Add configurable early bailout on test failures across runners, reporters, and exit codes.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "testem-per-launcher-reports",
@@ -1694,12 +1694,12 @@
       "pass_rate": 0.171,
       "desc": "Add policy-driven alerting with consecutive failure, latency, recovery, and SSL expiry notifications.",
       "tier": "hard",
-      "max_points": 30,
+      "max_points": 40,
       "solvers": 0,
       "available": true,
       "solved_by": [],
       "points_each": 0.0,
-      "next_points": 30.0
+      "next_points": 40.0
     },
     {
       "id": "valibot-recursive-schema-composition",
@@ -1833,85 +1833,73 @@
   "entries": [
     {
       "name": "staff-a",
-      "points": 35.0,
+      "points": 40.0,
       "solved": 2,
-      "f2p_sum": 2.0,
       "submissions": 2,
       "tasks": {
         "pest-character-class-coalescing": {
           "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
           "attempts": 1,
           "rank": 1,
-          "points": 15.0
+          "points": 20.0
         },
         "eicrud-keyset-pagination-cursor": {
           "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
           "attempts": 1,
           "rank": 1,
           "points": 20.0
         }
-      }
+      },
+      "place": 1
     },
     {
       "name": "jjwu67",
-      "points": 30.0,
+      "points": 40.0,
       "solved": 1,
-      "f2p_sum": 1.0,
       "submissions": 1,
       "tasks": {
         "bandit-structured-nosec-directives": {
           "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
           "attempts": 1,
           "rank": 1,
-          "points": 30.0
+          "points": 40.0
         }
-      }
+      },
+      "place": 2
     },
     {
       "name": "staff-b",
-      "points": 15.0,
+      "points": 20.0,
       "solved": 1,
-      "f2p_sum": 1.0,
       "submissions": 3,
       "tasks": {
         "anko-default-function-arguments": {
           "reward": 0,
-          "f2p": 0.0,
-          "p2p": 0.0,
           "attempts": 1
         },
         "pest-character-class-coalescing": {
           "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
           "attempts": 2,
           "rank": 2,
-          "points": 15.0
+          "points": 20.0
         }
-      }
+      },
+      "place": 3
     },
     {
       "name": "mattiafazzini",
       "points": 10.0,
       "solved": 1,
-      "f2p_sum": 1.0,
       "submissions": 1,
       "tasks": {
         "tengo-callable-instance-isolation": {
           "reward": 1,
-          "f2p": 1.0,
-          "p2p": 1.0,
           "attempts": 1,
           "rank": 1,
           "points": 10.0
         }
-      }
+      },
+      "place": 4
     }
   ]
 }

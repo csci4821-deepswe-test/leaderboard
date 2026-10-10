@@ -156,7 +156,7 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
         <table><tbody id="share-table"></tbody></table>
 </div>
       <div class="rule"><h3>Limits</h3>
-        <span><b id="max-sub2">3</b> graded submissions in total. Use them on different tasks or on the same task (for example, try a task again after a failed attempt).</span>
+        <span><b id="max-sub2">3</b> graded submissions per task. Try as many tasks as you like.</span>
 </div>
     </div>
   </section>
@@ -179,9 +179,9 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
     <h2>How a submission gets scored</h2>
     <ol class="flow">
       <li><b>Solve a task with Claude Code</b><span class="muted">Work interactively; your Claude Code transcript is part of the submission.</span></li>
-      <li><b>Open a PR in your course repo</b><span class="muted"><code>./finish.sh</code> packages your patch and transcript and pushes a branch; opening its PR submits it. Drafts are never graded: click “Ready for review” to submit one. After grading, the PR is closed; run <code>./finish.sh</code> again to submit again.</span></li>
-      <li><b>We re-grade</b><span class="muted">The patch is applied in a clean container and the held-out tests run. Results appear as a comment on your PR.</span></li>
-      <li><b>Board updates</b><span class="muted">Within a few minutes (longer near the deadline, when many students submit). You get <span id="max-sub">3</span> graded submissions in total, across all tasks.</span></li>
+      <li><b>Submit with a pull request</b><span class="muted">Run <code>./finish.sh &lt;task-id&gt;</code> (Windows: <code>.\finish.cmd &lt;task-id&gt;</code>) and open the link it prints. Clicking <b>Create pull request</b> submits your work.</span></li>
+      <li><b>We grade it</b><span class="muted">Hidden tests run on your changes. A comment on your PR says whether it passed or failed.</span></li>
+      <li><b>Board updates</b><span class="muted">Within a few minutes (longer near the deadline, when many students submit). You get <span id="max-sub">3</span> graded submissions per task.</span></li>
     </ol>
   </section>
 
@@ -212,29 +212,11 @@ function ago(iso) {
 const fmt = x => String(+x.toFixed(2));
 const TIER = { hard: "Hard", medium: "Medium", easy: "Easy" };
 
-function tags(e) {
-  return Object.entries(e.tasks)
-    .sort(([, a], [, b]) => (b.points ?? -1) - (a.points ?? -1) || b.f2p - a.f2p)
-    .map(([id, r]) => {
-      const short = esc(id.split("-")[0]);
-      if (r.reward === 1) return r.points > 0
-        ? `<span class="tag p" title="${esc(id)}: solver #${r.rank}">${short} +${fmt(r.points)}</span>`
-        : `<span class="tag z" title="${esc(id)}: solver #${r.rank}, after the first ${data.max_solvers}">${short} 0</span>`;
-      const what = r.f2p >= 1 ? "regressed" : `${Math.floor(r.f2p * 100)}%`;
-      return `<span class="tag" title="${esc(id)}: not solved${r.f2p >= 1 ? "; an existing test broke" : "; share of new tests passed"}">${short} ${what}</span>`;
-    }).join("");
-}
-
 function renderTable() {
   const top = Math.max(1, ...data.entries.map(e => e.points));   // bars are relative to the leader
   document.getElementById("thead").innerHTML =
     `<tr><th>#</th><th>Name</th><th>Points</th></tr>`;
-  let rank = 0, prev = null;   // shared rank for exact ties
-  const ranked = data.entries.map((e, i) => {
-    const key = `${e.points}|${e.solved}|${e.f2p_sum}`;
-    if (key !== prev) { rank = i + 1; prev = key; }
-    return { e, rank };
-  });
+  const ranked = data.entries.map(e => ({ e, rank: e.place }));   // place is computed by the poller (ties share it)
   const shown = ranked.filter(({ e }) => !q || e.name.toLowerCase().includes(q));
   const tbody = document.getElementById("tbody");
   if (!data.entries.length) { tbody.innerHTML = `<tr><td class="empty" colspan="3">No graded submissions yet.</td></tr>`; return; }
@@ -257,8 +239,8 @@ function renderRest() {
     [solves, "solves, all students"],
     [`${open}/${tasks.length}`, "tasks still available"],
   ].map(([v, k]) => `<div class="stat"><span class="v">${v}</span><span class="k">${k}</span></div>`).join("");
-  document.getElementById("max-sub").textContent = data.max_submissions;
-  document.getElementById("max-sub2").textContent = data.max_submissions;
+  document.getElementById("max-sub").textContent = data.max_per_task;
+  document.getElementById("max-sub2").textContent = data.max_per_task;
   document.querySelectorAll(".max-solvers").forEach(el => el.textContent = max);
   const tp = data.tier_points, [hc, mc] = data.tier_cutoffs.map(x => Math.round(x * 100));
   document.getElementById("tier-table").innerHTML =
