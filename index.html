@@ -162,7 +162,7 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
   </section>
 
   <section>
-    <div><h2>Tasks</h2><div class="muted" style="font-size:14px">A task's points are split among the students who solve it, up to ten (see Rules); after that the task is <b>not available</b>. The grey name under each title is its <b>task ID</b>, the name you give <code>./start.sh</code>. Click a column to sort, a task to see details.</div></div>
+    <div><h2>Tasks</h2><div class="muted" style="font-size:14px">A task's points are split among the students who solve it, up to ten (see Rules). After 10 students solve a task, the task becomes <b>unavailable</b>. The grey name under each title is its <b>task ID</b>, the name you give <code>./start.sh</code>. Click a column to sort, a task to see details.</div></div>
     <div class="filters">
       <div class="seg" role="group" aria-label="Difficulty">
         <button type="button" data-tier="" aria-pressed="true">All</button><button type="button" data-tier="hard" aria-pressed="false">Hard</button><button type="button" data-tier="medium" aria-pressed="false">Medium</button><button type="button" data-tier="easy" aria-pressed="false">Easy</button>
@@ -178,10 +178,10 @@ tr.detail td{background:var(--bg);white-space:normal;padding:12px 16px 14px 34px
   <section>
     <h2>How a submission gets scored</h2>
     <ol class="flow">
-      <li><b>Solve a task with Claude Code</b><span class="muted">Work interactively; your Claude Code transcript is part of the submission.</span></li>
+      <li><b>Solve a task with Claude Code</b><span class="muted">Use Sonnet 5.5 only. Work interactively with Claude Code. The session transcript is required for your submission.</span></li>
       <li><b>Submit with a pull request</b><span class="muted">Run <code>./finish.sh &lt;task-id&gt;</code> (Windows: <code>.\finish.cmd &lt;task-id&gt;</code>) and open the link it prints. Clicking <b>Create pull request</b> submits your work.</span></li>
       <li><b>We grade it</b><span class="muted">Hidden tests run on your changes. A comment on your PR says whether it passed or failed.</span></li>
-      <li><b>Board updates</b><span class="muted">Within a few minutes (longer near the deadline, when many students submit). You get <span id="max-sub">3</span> graded submissions per task.</span></li>
+      <li><b>Board updates</b><span class="muted">Within a few minutes. You get <span id="max-sub">3</span> graded submissions per task.</span></li>
     </ol>
   </section>
 
@@ -285,7 +285,6 @@ function renderRest() {
       <td style="font-family:var(--mono)" title="${t.solvers} of ${max} solved">${t.solvers}/${max}<span class="pips" aria-hidden="true">${pips}</span>${t.available ? "" : ` <span class="next none">Not available</span>`}</td></tr>` +
       (isOpen ? `<tr class="detail" id="${did}"><td colspan="${COLS.length}"><div class="d">
         <span>${esc(t.desc || "")}</span>
-        <span class="muted">Public pass rate ${Math.floor(t.pass_rate * 100)}%</span>
         <div class="start"><span>To start this task, run this in your challenge repo's folder (task ID <code>${esc(t.id)}</code>; see the README):</span>
           <div class="cmd"><code>./start.sh ${esc(t.id)}</code><button type="button" class="copy" data-copy="./start.sh ${esc(t.id)}">Copy</button><span class="muted">macOS / Linux</span></div>
           <div class="cmd"><code>.\\start.cmd ${esc(t.id)}</code><button type="button" class="copy" data-copy=".\\start.cmd ${esc(t.id)}">Copy</button><span class="muted">Windows (PowerShell)</span></div></div>
