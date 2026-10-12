@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T20:29:16+00:00",
+  "updated": "2026-10-12T20:30:51+00:00",
   "max_per_task": 3,
   "max_solvers": 10,
   "tier_points": {
@@ -481,14 +481,14 @@
       "solved_by": [
         "full-01",
         "full-02",
-        "full-03",
         "full-04",
         "full-05",
         "full-06",
         "full-07",
         "full-08",
         "full-09",
-        "full-10"
+        "full-10",
+        "full-11"
       ],
       "points_each": 1.0,
       "next_points": 0
@@ -1960,7 +1960,7 @@
       "place": 6
     },
     {
-      "name": "full-03",
+      "name": "full-04",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -1975,7 +1975,7 @@
       "place": 6
     },
     {
-      "name": "full-04",
+      "name": "full-05",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -1990,7 +1990,7 @@
       "place": 6
     },
     {
-      "name": "full-05",
+      "name": "full-06",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2005,7 +2005,7 @@
       "place": 6
     },
     {
-      "name": "full-06",
+      "name": "full-07",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2020,7 +2020,7 @@
       "place": 6
     },
     {
-      "name": "full-07",
+      "name": "full-08",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2035,7 +2035,7 @@
       "place": 6
     },
     {
-      "name": "full-08",
+      "name": "full-09",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2050,7 +2050,7 @@
       "place": 6
     },
     {
-      "name": "full-09",
+      "name": "full-10",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2065,7 +2065,7 @@
       "place": 6
     },
     {
-      "name": "full-10",
+      "name": "full-11",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2080,16 +2080,14 @@
       "place": 6
     },
     {
-      "name": "full-11",
-      "points": 0.0,
-      "solved": 1,
+      "name": "full-03",
+      "points": 0,
+      "solved": 0,
       "submissions": 1,
       "tasks": {
         "fastapi-deprecation-response-headers": {
-          "reward": 1,
-          "attempts": 1,
-          "rank": 11,
-          "points": 0.0
+          "reward": 0,
+          "attempts": 1
         }
       },
       "place": 16
