@@ -99,6 +99,10 @@ th[aria-sort=ascending] button::after{content:" ↑"} th[aria-sort=descending] b
 th[aria-sort] button{color:var(--ink)}
 .next{font-family:var(--mono);font-weight:600;color:var(--accent)}
 .next.none{color:var(--muted);font-weight:400}
+/* full task (10 solvers): greyed row, start command hidden (2026-10-12) */
+tr.full td{background:var(--soft)}
+tr.full .tbtn,tr.full .tid,tr.full .tier,tr.full .lang,tr.full .pips{opacity:.5}
+.full-badge{display:inline-block;margin-left:6px;font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.04em;padding:1px 6px;border-radius:4px;border:1px solid var(--muted);color:var(--muted)}
 .pips{display:inline-flex;gap:3px;vertical-align:middle;margin-left:6px}
 .pips i{width:7px;height:7px;border-radius:50%;border:1px solid var(--muted);display:block}
 .pips i.on{background:var(--muted)}
@@ -277,21 +281,21 @@ function renderRest() {
       const k = i + 1, cls = k === t.solvers ? "now" : k === t.solvers + 1 ? "next" : "";
       return `<span class="slot ${cls}" title="${k} solver${k > 1 ? "s" : ""}: ${fmt(t.max_points / k)} each">${fmt(t.max_points / k)}</span>`;
     }).join("");
-    return `<tr>
+    return `<tr class="${t.available ? "" : "full"}">
       <td class="tt"><button type="button" class="tbtn" data-task="${esc(t.id)}" aria-expanded="${isOpen}" aria-controls="${did}">${esc(t.title)}</button><code class="tid" title="Task ID">${esc(t.id)}</code></td>
       <td><span class="tier ${t.tier}">${TIER[t.tier]} · ${t.max_points}</span></td>
       <td class="wide"><span class="lang">${esc(t.lang)}</span></td>
-      <td style="font-family:var(--mono)" title="${t.solvers} of ${max} solved">${t.solvers}/${max}<span class="pips" aria-hidden="true">${pips}</span>${t.available ? "" : ` <span class="next none">Not available</span>`}</td></tr>` +
+      <td style="font-family:var(--mono)" title="${t.solvers} of ${max} solved">${t.solvers}/${max}<span class="pips" aria-hidden="true">${pips}</span>${t.available ? "" : `<span class="full-badge">Not available</span>`}</td></tr>` +
       (isOpen ? `<tr class="detail" id="${did}"><td colspan="${COLS.length}"><div class="d">
         <span>${esc(t.desc || "")}</span>
-        <div class="start"><span>To start this task, run this in your challenge repo's folder (task ID <code>${esc(t.id)}</code>; see the README):</span>
+        ${t.available ? `<div class="start"><span>To start this task, run this in your challenge repo's folder (task ID <code>${esc(t.id)}</code>; see the README):</span>
           <div class="cmd"><code>./start.sh ${esc(t.id)}</code><button type="button" class="copy" data-copy="./start.sh ${esc(t.id)}">Copy</button><span class="muted">macOS / Linux</span></div>
-          <div class="cmd"><code>.\\start.cmd ${esc(t.id)}</code><button type="button" class="copy" data-copy=".\\start.cmd ${esc(t.id)}">Copy</button><span class="muted">Windows (PowerShell)</span></div></div>
+          <div class="cmd"><code>.\\start.cmd ${esc(t.id)}</code><button type="button" class="copy" data-copy=".\\start.cmd ${esc(t.id)}">Copy</button><span class="muted">Windows (PowerShell)</span></div></div>` : ""}
         <span>${t.available
           ? `${t.solvers} of ${max} solved${t.solvers ? ` · each student that solved it now gets ${fmt(t.points_each)}` : ""} · if you solve it next, each student that solved the task gets <b>${fmt(t.next_points)}</b>`
-          : `<b>Not available</b>: ${max} students have solved it (${fmt(t.points_each)} points each).`}</span>
+          : `<b>Not available</b>: ${max} students have solved it (${fmt(t.points_each)} points each). New submissions for this task are not graded.`}</span>
         ${t.solved_by && t.solved_by.length ? `<span>Solved by: ${t.solved_by.map(u => `<code>${esc(u)}</code>`).join(", ")}</span>` : ""}
-        <div class="slots" aria-label="Points each solver gets when 1 to ${max} students have solved it">${slots}</div>
+        ${t.available ? `<div class="slots" aria-label="Points each solver gets when 1 to ${max} students have solved it">${slots}</div>` : ""}
       </div></td></tr>` : "");
   }).join("") : `<tr><td class="empty" colspan="${COLS.length}">No tasks match these filters.</td></tr>`;
   document.querySelectorAll("#tasks .tbtn").forEach(b => b.onclick = () => {
