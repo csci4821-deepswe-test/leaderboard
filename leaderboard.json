@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T20:26:54+00:00",
+  "updated": "2026-10-12T20:29:16+00:00",
   "max_per_task": 3,
   "max_solvers": 10,
   "tier_points": {
@@ -486,9 +486,9 @@
         "full-05",
         "full-06",
         "full-07",
+        "full-08",
         "full-09",
-        "full-10",
-        "full-11"
+        "full-10"
       ],
       "points_each": 1.0,
       "next_points": 0
@@ -2035,7 +2035,7 @@
       "place": 6
     },
     {
-      "name": "full-09",
+      "name": "full-08",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2050,7 +2050,7 @@
       "place": 6
     },
     {
-      "name": "full-10",
+      "name": "full-09",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2065,7 +2065,7 @@
       "place": 6
     },
     {
-      "name": "full-11",
+      "name": "full-10",
       "points": 1.0,
       "solved": 1,
       "submissions": 1,
@@ -2078,6 +2078,21 @@
         }
       },
       "place": 6
+    },
+    {
+      "name": "full-11",
+      "points": 0.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 11,
+          "points": 0.0
+        }
+      },
+      "place": 16
     }
   ]
 }
