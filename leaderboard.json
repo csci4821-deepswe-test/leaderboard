@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T08:43:11+00:00",
+  "updated": "2026-10-12T20:26:54+00:00",
   "max_per_task": 3,
   "max_solvers": 10,
   "tier_points": {
@@ -476,11 +476,22 @@
       "desc": "Add runtime Deprecation, Sunset, and Link headers plus OpenAPI metadata and tracking middleware for deprecated routes.",
       "tier": "easy",
       "max_points": 10,
-      "solvers": 0,
-      "available": true,
-      "solved_by": [],
-      "points_each": 0.0,
-      "next_points": 10.0
+      "solvers": 10,
+      "available": false,
+      "solved_by": [
+        "full-01",
+        "full-02",
+        "full-03",
+        "full-04",
+        "full-05",
+        "full-06",
+        "full-07",
+        "full-09",
+        "full-10",
+        "full-11"
+      ],
+      "points_each": 1.0,
+      "next_points": 0
     },
     {
       "id": "fastapi-implicit-head-options",
@@ -1917,6 +1928,156 @@
         }
       },
       "place": 4
+    },
+    {
+      "name": "full-01",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 1,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-02",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 2,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-03",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 3,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-04",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 4,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-05",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 5,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-06",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 6,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-07",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 7,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-09",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 8,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-10",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 9,
+          "points": 1.0
+        }
+      },
+      "place": 6
+    },
+    {
+      "name": "full-11",
+      "points": 1.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "fastapi-deprecation-response-headers": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 10,
+          "points": 1.0
+        }
+      },
+      "place": 6
     }
   ]
 }
