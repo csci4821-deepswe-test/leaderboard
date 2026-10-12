@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T05:28:29+00:00",
+  "updated": "2026-10-12T08:43:11+00:00",
   "max_per_task": 3,
   "max_solvers": 10,
   "tier_points": {
@@ -182,11 +182,13 @@
       "desc": "Add incremental analysis caching with cache invalidation, import/export, pruning, and cache inspection CLI options.",
       "tier": "easy",
       "max_points": 10,
-      "solvers": 0,
+      "solvers": 1,
       "available": true,
-      "solved_by": [],
-      "points_each": 0.0,
-      "next_points": 10.0
+      "solved_by": [
+        "jjwu67-win"
+      ],
+      "points_each": 10.0,
+      "next_points": 5.0
     },
     {
       "id": "bandit-interprocedural-taint-checks",
@@ -1885,6 +1887,21 @@
         }
       },
       "place": 3
+    },
+    {
+      "name": "jjwu67-win",
+      "points": 10.0,
+      "solved": 1,
+      "submissions": 1,
+      "tasks": {
+        "bandit-incremental-cache-control": {
+          "reward": 1,
+          "attempts": 1,
+          "rank": 1,
+          "points": 10.0
+        }
+      },
+      "place": 4
     },
     {
       "name": "mattiafazzini",
